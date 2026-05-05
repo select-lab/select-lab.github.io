@@ -13,23 +13,15 @@ background:#ffffff;
 color:#222;
 }
 
-/* 全体 */
 .container{
 max-width:1100px;
 margin:auto;
 padding:0 20px;
 }
 
-/* フル幅 */
 .full{
 width:100%;
-}
-
-/* ヒーロー */
-.hero{
-background:#fff;
-padding:0;
-text-align:center;
+border-radius:12px;
 }
 
 .hero img{
@@ -37,7 +29,6 @@ width:100%;
 display:block;
 }
 
-/* セクション */
 .section{
 padding:80px 20px;
 }
@@ -48,7 +39,13 @@ font-size:28px;
 margin-bottom:20px;
 }
 
-/* カード */
+.lead{
+text-align:center;
+font-size:18px;
+color:#555;
+margin-bottom:30px;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -63,7 +60,6 @@ border-radius:15px;
 text-align:center;
 }
 
-/* CTA */
 .cta{
 display:inline-block;
 background:#ff6a00;
@@ -80,15 +76,6 @@ margin-top:30px;
 text-align:center;
 }
 
-/* サブコピー */
-.lead{
-text-align:center;
-font-size:18px;
-color:#555;
-margin-bottom:30px;
-}
-
-/* フッター */
 .footer{
 text-align:center;
 padding:40px;
@@ -100,45 +87,36 @@ color:#888;
 
 <body>
 
-<!-- ファーストビュー（画像メイン） -->
+<!-- ファーストビュー -->
 <section class="hero">
 <img src="image1.jpg.png">
 </section>
 
-<!-- 補足コピー（シンプルに） -->
 <section class="section">
 <div class="container">
-
 <h2>たった1枚の写真から、特別なカタチへ</h2>
-
 <p class="lead">
 大切なペットや思い出を、世界に一つだけのフィギュアとして残せます。
 </p>
-
 <div class="center">
-<a class="cta" href="#">▶ 詳細を見る</a>
+<a class="cta" href="#">▶ 公式サイトで確認する</a>
 </div>
-
 </div>
 </section>
 
-<!-- 仕組み（画像主役） -->
+<!-- 仕組み -->
 <section class="section" style="background:#fafafa;">
 <div class="container">
-
 <img class="full" src="image2.jpg.png">
-
 <p class="lead">
-写真をアップロードするだけ。AIが解析し、リアルな立体へ。
+スマホ写真をアップロードするだけで、AIが解析しリアルな立体へ。
 </p>
-
 </div>
 </section>
 
-<!-- 強み（軽く説明だけ） -->
+<!-- 強み -->
 <section class="section">
 <div class="container">
-
 <h2>選ばれている理由</h2>
 
 <div class="grid">
@@ -155,7 +133,6 @@ color:#888;
 <!-- 利用シーン -->
 <section class="section" style="background:#fafafa;">
 <div class="container">
-
 <h2>こんなシーンに</h2>
 
 <div class="grid">
@@ -168,31 +145,84 @@ color:#888;
 </div>
 </section>
 
-<!-- ギフト（画像主役） -->
+<!-- ギフト -->
 <section class="section">
 <div class="container">
-
 <img class="full" src="image4.jpg.png">
-
 <p class="lead">
 箱を開けた瞬間、思わず笑顔になる特別な贈り物。
 </p>
+</div>
+</section>
+
+<!-- 説得 -->
+<section class="section" style="background:#ffffff;">
+<div class="container">
+
+<h2>なぜこのサービスが選ばれているのか</h2>
+
+<div class="grid">
+<div class="card">
+<h3>一点物の価値</h3>
+<p>あなたの写真から作る完全オリジナル作品。</p>
+</div>
+
+<div class="card">
+<h3>高い再現度</h3>
+<p>AIと3D技術で細部までリアルに再現。</p>
+</div>
+
+<div class="card">
+<h3>長く残る思い出</h3>
+<p>立体だからこそ、ずっと残り続ける。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 不安解消 -->
+<section class="section" style="background:#fafafa;">
+<div class="container">
+
+<h2>購入前の不安を解消</h2>
+
+<div class="grid">
+<div class="card">
+<h3>本当に似る？</h3>
+<p>特徴をAIが分析し再現されます。</p>
+</div>
+
+<div class="card">
+<h3>写真は安全？</h3>
+<p>制作後は削除され安心です。</p>
+</div>
+
+<div class="card">
+<h3>失敗しない？</h3>
+<p>明るく正面の写真で高品質に仕上がります。</p>
+</div>
+</div>
 
 </div>
 </section>
 
 <!-- CTA -->
-<section class="section" style="background:#fafafa;">
+<section class="section" style="background:#fff3e8;">
 <div class="container center">
 
 <img class="full" src="image5.jpg.png">
 
-<a class="cta" href="#">▶ 今すぐオーダーする</a>
+<h2>今すぐチェックしてみる</h2>
+
+<a class="cta" href="#">
+▶ 公式サイトを見る
+</a>
 
 </div>
 </section>
 
-<!-- Q&A（シンプル） -->
+<!-- Q&A -->
 <section class="section">
 <div class="container">
 
@@ -203,6 +233,30 @@ color:#888;
 <div class="card">約7〜10日で発送</div>
 <div class="card">約6〜16cmサイズ</div>
 </div>
+
+</div>
+</section>
+
+<!-- SEOブロック -->
+<section class="section" style="background:#ffffff;">
+<div class="container">
+
+<h2>写真から作るフィギュアの魅力</h2>
+
+<p class="lead">
+オーダーメイドフィギュアは、思い出を形にする新しいサービスです。
+</p>
+
+<p style="line-height:2;">
+写真から作るフィギュアは、AIと3Dプリントを活用し、
+大切な存在をリアルに再現できる新しい体験です。
+従来のプレゼントとは異なり、長く残る価値があります。
+</p>
+
+<p style="line-height:2;">
+特にペットフィギュアは人気が高く、
+記念やメモリアルとして多くの人に選ばれています。
+</p>
 
 </div>
 </section>
