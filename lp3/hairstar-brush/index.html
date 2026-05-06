@@ -8,6 +8,7 @@
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
+
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -33,16 +34,21 @@ width:100%;
 display:block;
 }
 
+/* 修正版 */
 .hero-overlay{
 position:absolute;
-bottom:10%;
+bottom:4%;
 left:8%;
 color:#fff;
-max-width:500px;
+max-width:620px;
+background:rgba(0,0,0,0.45);
+padding:35px 40px;
+border-radius:28px;
+backdrop-filter:blur(4px);
 }
 
 .hero-overlay h1{
-font-size:52px;
+font-size:44px;
 margin:0 0 20px;
 line-height:1.2;
 text-shadow:0 5px 20px rgba(0,0,0,0.3);
@@ -51,6 +57,7 @@ text-shadow:0 5px 20px rgba(0,0,0,0.3);
 .hero-overlay p{
 font-size:20px;
 opacity:0.95;
+margin-bottom:30px;
 }
 
 .section{
@@ -98,15 +105,20 @@ display:block;
 margin:50px 0;
 }
 
+/* 修正版CTA */
 .cta{
 display:inline-block;
-padding:20px 48px;
+padding:20px 70px;
+min-width:320px;
+text-align:center;
 background:linear-gradient(135deg,#111,#444);
 color:#fff;
 border-radius:60px;
 text-decoration:none;
 font-weight:bold;
 font-size:18px;
+margin-top:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
 transition:0.3s;
 }
 
@@ -152,14 +164,15 @@ color:#999;
 @media(max-width:768px){
 
 .hero-overlay{
-position:absolute;
 left:20px;
 right:20px;
-bottom:30px;
+bottom:20px;
+padding:25px;
+max-width:none;
 }
 
 .hero-overlay h1{
-font-size:34px;
+font-size:32px;
 }
 
 .hero-overlay p{
@@ -174,7 +187,15 @@ padding:80px 20px;
 font-size:28px;
 }
 
+.cta{
+min-width:auto;
+width:100%;
+padding:18px 20px;
+box-sizing:border-box;
 }
+
+}
+
 </style>
 </head>
 
@@ -193,7 +214,8 @@ font-size:28px;
 </h1>
 
 <p>
-ブラッシングするだけで、艶とまとまりのある髪へ。
+ブラッシングするだけで、
+艶とまとまりのある髪へ。
 </p>
 
 <a class="cta" href="#" target="_blank">
@@ -461,6 +483,10 @@ HAIRSTARは、「髪で、あなたを輝かせる。」をコンセプトに展
 
 </div>
 </section>
+
+<div class="footer">
+※本ページは広告を含みます
+</div>
 
 </body>
 </html>
