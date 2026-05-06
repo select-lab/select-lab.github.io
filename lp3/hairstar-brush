@@ -182,10 +182,15 @@ font-size:28px;
 
 <!-- HERO -->
 <section class="hero">
+
 <img src="image1.jpg.png">
 
 <div class="hero-overlay">
-<h1>“魔法のブラシ”<br>と話題のHAIRSTAR</h1>
+
+<h1>
+“魔法のブラシ”<br>
+と話題のHAIRSTAR
+</h1>
 
 <p>
 ブラッシングするだけで、艶とまとまりのある髪へ。
@@ -194,6 +199,7 @@ font-size:28px;
 <a class="cta" href="#" target="_blank">
 ▶ 公式サイトを見る
 </a>
+
 </div>
 </section>
 
@@ -456,6 +462,8 @@ HAIRSTARは、「髪で、あなたを輝かせる。」をコンセプトに展
 </div>
 </section>
 
+</body>
+</html>
 
 <!-- SEOロングコンテンツ -->
 <section style="background:#fafafa; padding:120px 20px;">
