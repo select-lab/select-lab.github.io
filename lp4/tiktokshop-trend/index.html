@@ -1,1 +1,619 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>TikTok Shopとは？動画で“見つけて買う”新時代ショッピング</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#000;
+color:#fff;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 24px;
+}
+
+.section{
+padding:110px 20px;
+position:relative;
+}
+
+.section-title{
+font-size:42px;
+line-height:1.3;
+margin-bottom:25px;
+font-weight:700;
+text-align:center;
+}
+
+.lead{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#ccc;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+radial-gradient(circle at top left,#25F4EE20,transparent 30%),
+radial-gradient(circle at bottom right,#FE2C5520,transparent 30%),
+#000;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:#25F4EE15;
+filter:blur(120px);
+top:-150px;
+left:-150px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:#FE2C5515;
+filter:blur(120px);
+bottom:-150px;
+right:-150px;
+}
+
+.hero-box{
+max-width:950px;
+padding:60px;
+border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(14px);
+border-radius:36px;
+text-align:center;
+position:relative;
+z-index:2;
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-tag{
+display:inline-block;
+padding:10px 22px;
+border-radius:999px;
+background:#111;
+border:1px solid rgba(255,255,255,0.08);
+font-size:13px;
+letter-spacing:2px;
+margin-bottom:30px;
+}
+
+.hero-title{
+font-size:72px;
+line-height:1.1;
+margin:0 0 30px;
+font-weight:800;
+}
+
+.gradient{
+background:linear-gradient(90deg,#25F4EE,#FE2C55);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-desc{
+font-size:22px;
+color:#ddd;
+max-width:760px;
+margin:auto;
+margin-bottom:45px;
+}
+
+.cta{
+display:inline-block;
+padding:22px 65px;
+border-radius:999px;
+background:linear-gradient(90deg,#25F4EE,#FE2C55);
+color:#fff;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 10px 40px rgba(254,44,85,0.25);
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin-top:50px;
+}
+
+.card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+border-radius:26px;
+backdrop-filter:blur(10px);
+}
+
+.card h3{
+margin-top:0;
+font-size:24px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#cfcfcf;
+}
+
+.full-img{
+width:100%;
+border-radius:30px;
+display:block;
+margin:60px 0;
+}
+
+.white-section{
+background:#fff;
+color:#111;
+}
+
+.white-section .lead{
+color:#555;
+}
+
+.white-section .card{
+background:#fff;
+border:none;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+
+.white-section .card p{
+color:#555;
+}
+
+.line{
+width:120px;
+height:4px;
+margin:25px auto;
+background:linear-gradient(90deg,#25F4EE,#FE2C55);
+border-radius:999px;
+}
+
+.highlight{
+padding:40px;
+border-radius:30px;
+background:linear-gradient(135deg,#0f0f0f,#1d1d1d);
+border:1px solid rgba(255,255,255,0.08);
+margin-top:50px;
+}
+
+.highlight p{
+color:#d7d7d7;
+}
+
+.list-box{
+margin-top:40px;
+display:grid;
+gap:18px;
+}
+
+.list-item{
+background:rgba(255,255,255,0.05);
+padding:22px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.footer{
+padding:50px 20px;
+text-align:center;
+font-size:12px;
+color:#888;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:768px){
+
+.hero{
+min-height:auto;
+padding:120px 20px;
+}
+
+.hero-box{
+padding:35px 25px;
+}
+
+.hero-title{
+font-size:42px;
+}
+
+.hero-desc{
+font-size:17px;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.cta{
+width:100%;
+box-sizing:border-box;
+padding:18px 20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="hero-tag">
+NEXT GENERATION SHOPPING
+</div>
+
+<h1 class="hero-title">
+<span class="gradient">TikTok Shop</span><br>
+“探す”から<br>
+“見つける”時代へ
+</h1>
+
+<p class="hero-desc">
+ショート動画を見ているその瞬間に、
+気になった商品をそのまま購入。
+エンタメとショッピングが融合した、
+次世代の動画EC体験。
+</p>
+
+<a class="cta" href="#" target="_blank">
+▶ TikTok Shopをチェックする
+</a>
+
+</div>
+
+</section>
+
+<!-- INTRO -->
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+TikTok Shopとは？
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+TikTok Shopは、
+ショート動画やライブ配信を見ながら
+そのまま商品を購入できる新しいショッピング体験です。
+従来のように「検索して探す」のではなく、
+動画を楽しむ中で自然に商品と出会えることが大きな特徴です。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>動画×ショッピング</h3>
+<p>
+動画を見ながら気になる商品をその場でチェック。
+アプリ内でスムーズに購入できます。
+</p>
+</div>
+
+<div class="card">
+<h3>ライブ配信対応</h3>
+<p>
+ライブコマースによって、
+リアルタイムで商品紹介や質問対応が可能。
+</p>
+</div>
+
+<div class="card">
+<h3>スマホ完結</h3>
+<p>
+外部サイトへ移動せず、
+TikTok内で決済まで完了。
+</p>
+</div>
+
+</div>
+
+<img class="full-img" src="image1.jpg.png">
+
+</div>
+
+</section>
+
+<!-- DISCOVER -->
+<section class="section white-section">
+
+<div class="container">
+
+<h2 class="section-title">
+“発見型ショッピング”が<br>
+新しい
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+従来のECサイトでは、
+ユーザーは欲しい商品を検索して探していました。
+しかしTikTok Shopでは、
+動画を見ているうちに「欲しい」が生まれます。
+</p>
+
+<div class="highlight">
+
+<p>
+ショート動画だからこそ、
+商品の雰囲気やサイズ感、
+リアルな使用シーンまで伝わる。
+だから購入前の不安が少なく、
+直感的にショッピングを楽しめます。
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>衝動買いとの相性</h3>
+<p>
+「これ気になる」が
+そのまま購入につながりやすい。
+</p>
+</div>
+
+<div class="card">
+<h3>レビュー感覚で見れる</h3>
+<p>
+動画だから、
+実際の使用感が伝わりやすい。
+</p>
+</div>
+
+<div class="card">
+<h3>SNS感覚</h3>
+<p>
+広告感が少なく、
+自然に商品を発見できる。
+</p>
+</div>
+
+</div>
+
+<img class="full-img" src="image2.jpg.png">
+
+</div>
+
+</section>
+
+<!-- LIVE COMMERCE -->
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+ライブコマースの可能性
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+TikTok Shopでは、
+ライブ配信中に商品を紹介し、
+リアルタイムで購入へつなげることができます。
+</p>
+
+<div class="list-box">
+
+<div class="list-item">
+✔ コメントを通じてリアルタイム質問
+</div>
+
+<div class="list-item">
+✔ 使用感をその場で確認
+</div>
+
+<div class="list-item">
+✔ 限定クーポンや特典配布
+</div>
+
+<div class="list-item">
+✔ インフルエンサー販売との相性抜群
+</div>
+
+</div>
+
+<img class="full-img" src="image3.jpg.png">
+
+</div>
+
+</section>
+
+<!-- CREATOR -->
+<section class="section white-section">
+
+<div class="container">
+
+<h2 class="section-title">
+クリエイター時代のEC
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+TikTok Shopは、
+単なる通販サイトではありません。
+動画を作る人、
+ライブ配信をする人、
+インフルエンサー、
+すべての“発信者”が販売者になれる時代です。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>フォロワー収益化</h3>
+<p>
+コンテンツを通じて
+直接収益につなげられる。
+</p>
+</div>
+
+<div class="card">
+<h3>アフィリエイト展開</h3>
+<p>
+クリエイターが商品紹介し、
+成果報酬を得られる仕組み。
+</p>
+</div>
+
+<div class="card">
+<h3>ブランド構築</h3>
+<p>
+個人でもブランド展開しやすい。
+</p>
+</div>
+
+</div>
+
+<img class="full-img" src="image4.jpg.png">
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="section">
+
+<div class="container">
+
+<div class="hero-box">
+
+<div class="hero-tag">
+START NEW SHOPPING EXPERIENCE
+</div>
+
+<h2 class="hero-title" style="font-size:58px;">
+次世代ECを<br>
+体験してみる
+</h2>
+
+<p class="hero-desc">
+TikTok Shopは、
+これからのショッピング体験を大きく変える
+新しいプラットフォームとして注目されています。
+</p>
+
+<a class="cta" href="#" target="_blank">
+▶ TikTok Shopを見る
+</a>
+
+</div>
+
+<img class="full-img" src="image5.jpg.png">
+
+</div>
+
+</section>
+
+<!-- SEO LONG -->
+<section class="section white-section">
+
+<div class="container">
+
+<h2 class="section-title">
+TikTok Shopが注目される理由
+</h2>
+
+<div class="line"></div>
+
+<p style="max-width:980px; margin:auto; font-size:17px; color:#555; line-height:2.2;">
+
+TikTok Shopは、動画とショッピングを融合させた新しいECサービスとして世界中で急速に拡大しています。
+従来のネット通販は「検索して探す」スタイルが主流でしたが、
+TikTok Shopでは「動画を見ていたら欲しくなった」という自然な流れで商品購入へつながります。
+
+特にショート動画文化との相性が非常によく、
+商品の使用シーンやサイズ感、
+リアルなレビュー感覚を動画で確認できることから、
+従来のECサイトよりも直感的に買い物しやすいという特徴があります。
+
+また、ライブコマース機能によって、
+リアルタイムで質問をしながら商品購入できる点も大きな魅力です。
+ライブ配信中に限定クーポンを配布したり、
+インフルエンサーが実際に商品を使用しながら紹介することで、
+高い購入率につながるケースも増えています。
+
+さらにTikTok Shopは、
+個人クリエイターやインフルエンサーとの相性も非常によく、
+アフィリエイト機能やショップ機能によって、
+個人でも収益化しやすい環境が整っています。
+
+動画EC市場は今後さらに成長すると言われており、
+TikTok Shopはその中心的存在になる可能性があります。
+特にスマホ世代やSNSネイティブ世代にとっては、
+従来型ECよりも自然なショッピング体験として受け入れられています。
+
+今後はファッション、
+美容、
+ガジェット、
+インテリア、
+食品など、
+さまざまなジャンルの商品展開が広がっていくと予想されています。
+
+</p>
+
+<div style="text-align:center; margin-top:60px;">
+
+<a class="cta" href="#" target="_blank">
+▶ 詳細を確認する
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+※本ページは広告を含みます
+</div>
+
+</body>
+</html>
