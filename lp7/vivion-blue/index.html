@@ -1,1 +1,862 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 
+<title>“好き”を、もっと美しく。｜viviON BLUE</title>
+
+<meta name="description" content="アニメ・VTuber・フィギュア・アクスタ・缶バッジなど、二次元カルチャーを楽しむための公式オンラインストア「viviON BLUE」を紹介。限定グッズや正規ライセンス商品、予約アイテムなどを掲載。">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#f7f9fc;
+color:#1e293b;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#dbeafe;
+filter:blur(120px);
+top:-250px;
+right:-150px;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#eff6ff;
+filter:blur(120px);
+bottom:-250px;
+left:-150px;
+z-index:-1;
+}
+
+.container{
+max-width:1180px;
+margin:auto;
+padding:0 24px;
+}
+
+/* HERO */
+
+.hero{
+padding:120px 20px 80px;
+position:relative;
+}
+
+.hero-inner{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:50px;
+align-items:center;
+}
+
+.hero-left{
+position:relative;
+}
+
+.hero-mini{
+font-size:12px;
+letter-spacing:3px;
+font-weight:700;
+color:#3b82f6;
+margin-bottom:30px;
+}
+
+.hero-title{
+font-size:84px;
+line-height:1.02;
+letter-spacing:-4px;
+font-weight:800;
+margin:0 0 35px;
+color:#0f172a;
+}
+
+.hero-title span{
+color:#3b82f6;
+}
+
+.hero-desc{
+font-size:19px;
+color:#475569;
+max-width:640px;
+margin-bottom:45px;
+}
+
+.cta{
+display:inline-block;
+padding:20px 60px;
+background:#2563eb;
+color:#fff;
+border-radius:999px;
+text-decoration:none;
+font-size:17px;
+font-weight:700;
+transition:0.3s;
+box-shadow:
+0 12px 30px rgba(37,99,235,0.15);
+}
+
+.cta:hover{
+transform:translateY(-4px);
+background:#1d4ed8;
+}
+
+.hero-right{
+position:relative;
+}
+
+.hero-panel{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(14px);
+border:1px solid #dbeafe;
+padding:35px;
+border-radius:34px;
+box-shadow:
+0 20px 60px rgba(15,23,42,0.06);
+}
+
+.hero-panel h3{
+margin-top:0;
+font-size:30px;
+line-height:1.3;
+margin-bottom:20px;
+}
+
+.hero-panel p{
+color:#475569;
+font-size:16px;
+}
+
+/* SECTION */
+
+.section{
+padding:70px 20px;
+position:relative;
+}
+
+.section-title{
+font-size:54px;
+line-height:1.15;
+letter-spacing:-2px;
+margin-bottom:18px;
+text-align:center;
+color:#0f172a;
+}
+
+.line{
+width:120px;
+height:4px;
+margin:0 auto 35px;
+border-radius:999px;
+background:
+linear-gradient(90deg,#93c5fd,#2563eb);
+}
+
+.lead{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#475569;
+}
+
+/* IMAGE */
+
+.full-img{
+width:100%;
+display:block;
+border-radius:30px;
+margin:20px 0 40px;
+box-shadow:
+0 20px 50px rgba(15,23,42,0.08);
+border:1px solid #dbeafe;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
+margin-top:40px;
+}
+
+.card{
+background:#ffffff;
+padding:32px;
+border-radius:28px;
+border:1px solid #e2e8f0;
+box-shadow:
+0 10px 30px rgba(15,23,42,0.04);
+}
+
+.card h3{
+margin-top:0;
+font-size:24px;
+margin-bottom:14px;
+color:#0f172a;
+}
+
+.card p{
+color:#475569;
+}
+
+/* LONG PANEL */
+
+.long-panel{
+margin-top:45px;
+padding:45px;
+border-radius:34px;
+background:
+linear-gradient(135deg,#ffffff,#f8fbff);
+border:1px solid #dbeafe;
+box-shadow:
+0 20px 50px rgba(15,23,42,0.05);
+}
+
+.long-panel-mini{
+font-size:12px;
+letter-spacing:3px;
+font-weight:700;
+color:#3b82f6;
+margin-bottom:18px;
+}
+
+.long-panel h3{
+font-size:40px;
+line-height:1.25;
+margin-top:0;
+margin-bottom:22px;
+letter-spacing:-1px;
+color:#0f172a;
+}
+
+.long-panel p{
+font-size:17px;
+line-height:2;
+color:#475569;
+}
+
+/* MINI ITEMS */
+
+.mini-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin-top:35px;
+}
+
+.mini-item{
+padding:22px;
+border-radius:18px;
+background:#ffffff;
+border:1px solid #dbeafe;
+font-weight:600;
+color:#334155;
+}
+
+/* SEO */
+
+.seo{
+background:#f1f6fd;
+border-top:1px solid #dbeafe;
+border-bottom:1px solid #dbeafe;
+}
+
+.seo-text{
+max-width:1000px;
+margin:auto;
+font-size:17px;
+line-height:2.2;
+color:#475569;
+}
+
+.seo-text h3{
+font-size:34px;
+margin:70px 0 25px;
+line-height:1.3;
+letter-spacing:-1px;
+color:#0f172a;
+}
+
+/* FOOTER */
+
+.footer{
+padding:45px 20px;
+text-align:center;
+font-size:12px;
+color:#64748b;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-inner{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:54px;
+letter-spacing:-2px;
+}
+
+.hero{
+padding:90px 20px 60px;
+}
+
+.section{
+padding:55px 20px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+.long-panel{
+padding:32px 24px;
+}
+
+.long-panel h3{
+font-size:30px;
+}
+
+.cta{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="hero-left">
+
+<div class="hero-mini">
+TOKYO OTAKU CULTURE STORE
+</div>
+
+<h1 class="hero-title">
+“好き”を、<br>
+もっと<span>美しく。</span>
+</h1>
+
+<p class="hero-desc">
+アニメ、
+VTuber、
+フィギュア、
+アクスタ、
+缶バッジ。
+
+二次元カルチャーを、
+もっと自由に楽しむための
+オンラインストア「viviON BLUE」。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式ショップを見る
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-panel">
+
+<h3>
+カルチャーとして、
+“推し”を楽しむ。
+</h3>
+
+<p>
+viviON BLUEは、
+アニメ・ゲーム・VTuber・ホビー領域の商品を取り扱う、
+二次元コンテンツ専門オンラインストア。
+
+限定商品や公式グッズ、
+予約アイテムなど、
+ここでしか出会えないアイテムも展開されています。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE1 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image1.jpg.png">
+
+<h2 class="section-title">
+二次元カルチャーを、<br>
+もっと自由に。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+アニメ、
+ゲーム、
+VTuber、
+ホビー。
+
+viviON BLUEは、
+“好き”をもっと深く楽しみたい人のために展開されている、
+新しいオンラインストアです。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>限定アイテム</h3>
+<p>
+ここでしか手に入らない商品や予約アイテムも展開。
+</p>
+</div>
+
+<div class="card">
+<h3>公式ショップ</h3>
+<p>
+正規ライセンス商品のみを取り扱う安心感。
+</p>
+</div>
+
+<div class="card">
+<h3>幅広いジャンル</h3>
+<p>
+アニメ・VTuber・フィギュア・ホビーまで対応。
+</p>
+</div>
+
+</div>
+
+<div class="long-panel">
+
+<div class="long-panel-mini">
+CULTURE × FUTURE
+</div>
+
+<h3>
+“推し活”を、
+もっと自分らしく。
+</h3>
+
+<p>
+グッズを集めるだけではなく、
+作品やキャラクターとの距離をもっと近く感じたい。
+
+viviON BLUEでは、
+そんな二次元ファンへ向けた商品展開が行われています。
+
+限定グッズやコラボ商品、
+アクリルスタンド、
+フィギュアなど、
+幅広いアイテムを取り扱っていることも魅力。
+
+“好き”をもっと自由に楽しみたい方から注目されています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE2 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image2.jpg.png">
+
+<h2 class="section-title">
+VTuber・アクスタ・<br>
+缶バッジ。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+人気VTuberグッズや、
+コレクション性の高いアクリルスタンド、
+缶バッジなども展開。
+</p>
+
+<div class="mini-grid">
+
+<div class="mini-item">
+✔ VTuber公式グッズ
+</div>
+
+<div class="mini-item">
+✔ アクリルスタンド
+</div>
+
+<div class="mini-item">
+✔ 限定コラボ商品
+</div>
+
+<div class="mini-item">
+✔ 缶バッジ・ステッカー
+</div>
+
+</div>
+
+<div class="long-panel">
+
+<h3>
+“ここ限定”という、
+特別感。
+</h3>
+
+<p>
+二次元グッズを探している方の中には、
+「他では見つからない商品が欲しい」
+という方も少なくありません。
+
+viviON BLUEでは、
+予約商品や限定アイテムも多数展開されており、
+公式ショップならではの特別感を楽しめることも魅力。
+
+新作情報や予約開始タイミングをチェックしているファンも増えています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE3 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image3.jpg.png">
+
+<h2 class="section-title">
+フィギュア通販としても、<br>
+注目。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+人気作品のフィギュアやホビー商品も展開されており、
+コレクションを楽しみたいユーザーからも注目されています。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>予約対応</h3>
+<p>
+新作フィギュアや人気商品も予約可能。
+</p>
+</div>
+
+<div class="card">
+<h3>コレクション性</h3>
+<p>
+飾る楽しさを広げる豊富なラインナップ。
+</p>
+</div>
+
+<div class="card">
+<h3>正規品中心</h3>
+<p>
+安心して購入しやすい公式通販サイト。
+</p>
+</div>
+
+</div>
+
+<div class="long-panel">
+
+<div class="long-panel-mini">
+OFFICIAL ONLINE STORE
+</div>
+
+<h3>
+フィギュア通販を、
+もっと安心して。
+</h3>
+
+<p>
+フィギュアや限定商品は、
+転売やプレミア価格などが話題になることもあります。
+
+その中で、
+正規ライセンス商品を取り扱う公式ショップとして、
+安心感を重視して利用するユーザーも増えています。
+
+viviON BLUEは、
+通販サイトとしての安全性や信頼性を重視したい方からも注目されています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE4 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image4.jpg.png">
+
+<h2 class="section-title">
+公式ショップならではの、<br>
+安心感。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+通販サイトを利用する際、
+「ちゃんと届く？」
+「正規品？」
+と不安を感じる方もいます。
+
+viviON BLUEは、
+正規ライセンス商品のみを取り扱うオンラインストアです。
+</p>
+
+<div class="long-panel">
+
+<h3>
+配送・決済・ポイント制度にも対応
+</h3>
+
+<p>
+viviON BLUEでは、
+クレジットカードだけでなく、
+PayPayやApple Pay、
+後払い決済などにも対応。
+
+ポイント制度も導入されており、
+日々の買い物をもっと楽しめる仕組みも展開されています。
+
+通販サイトとしての使いやすさや、
+安心して利用しやすい環境も、
+人気の理由のひとつです。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE5 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image5.jpg.png">
+
+<h2 class="section-title">
+“推し活”の、<br>
+新しい拠点へ。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+アニメ、
+VTuber、
+ホビー、
+フィギュア。
+
+好きなカルチャーを、
+もっと自由に楽しみたい人のためのオンラインストアとして、
+viviON BLUEは注目されています。
+</p>
+
+<div class="long-panel" style="text-align:center;">
+
+<div class="long-panel-mini">
+TOKYO OTAKU CULTURE
+</div>
+
+<h3>
+“好き”を、
+もっと楽しむために。
+</h3>
+
+<p style="max-width:850px; margin:30px auto 50px;">
+限定商品、
+公式グッズ、
+予約アイテム。
+
+viviON BLUEは、
+二次元カルチャーをもっと楽しみたい人へ向けた、
+新しいオンラインストアです。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ viviON BLUE公式ショップを見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEO -->
+<section class="section seo">
+
+<div class="container">
+
+<h2 class="section-title">
+viviON BLUEとは？
+</h2>
+
+<div class="line"></div>
+
+<div class="seo-text">
+
+<h3>
+二次元カルチャーを楽しむためのオンラインストア
+</h3>
+
+<p>
+viviON BLUEは、
+アニメ・ゲーム・VTuber・ホビー領域の商品を中心に取り扱う、
+二次元コンテンツ専門オンラインストアです。
+
+フィギュア、
+アクリルスタンド、
+缶バッジ、
+ステッカー、
+限定グッズなど、
+幅広いジャンルの商品を展開。
+
+“推し活”をもっと楽しみたい人からも注目されています。
+</p>
+
+<h3>
+公式ショップとしての安心感
+</h3>
+
+<p>
+通販サイトでグッズを購入する際、
+正規品か不安に感じる方もいます。
+
+viviON BLUEでは、
+正規ライセンス商品のみを取り扱っているため、
+安心して利用しやすい公式ショップとしても人気。
+
+限定商品や予約商品も展開されており、
+ここでしか手に入らないアイテムを探している方との相性も良いオンラインストアです。
+</p>
+
+<h3>
+VTuber・フィギュア通販としても人気
+</h3>
+
+<p>
+VTuberグッズやフィギュア、
+ホビー商品など、
+コレクション性の高い商品も多数展開。
+
+アクリルスタンドや缶バッジなど、
+人気アイテムも豊富に揃っています。
+
+推し活をもっと楽しみたい方からも注目されています。
+</p>
+
+<h3>
+こんな方におすすめ
+</h3>
+
+<p>
+・アニメグッズ通販サイトを探している方
+
+・VTuberグッズを探している方
+
+・限定アクスタを集めたい方
+
+・フィギュア通販サイトを探している方
+
+・正規ライセンス商品を購入したい方
+
+・“推し活”をもっと楽しみたい方
+
+・公式ショップ限定商品をチェックしたい方
+</p>
+
+</div>
+
+<div style="text-align:center; margin-top:70px;">
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式ショップで詳細を見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+※本ページは広告を含みます
+</div>
+
+</body>
+</html>
