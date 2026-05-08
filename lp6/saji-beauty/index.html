@@ -1,1 +1,731 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 
+<title>毎日に、鉄分習慣という選択。｜豊潤サジー</title>
+
+<meta name="description" content="忙しい毎日に、内側からの美容習慣。豊潤サジーの特徴や飲み方、続けやすさをわかりやすく紹介。鉄分やビタミンCなど200種類以上の栄養素を含む人気のインナーケアドリンク。">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#fffdf9;
+color:#3f342d;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+.bg-light1{
+position:fixed;
+width:500px;
+height:500px;
+background:#ffb34720;
+filter:blur(120px);
+top:-200px;
+left:-200px;
+z-index:-1;
+}
+
+.bg-light2{
+position:fixed;
+width:500px;
+height:500px;
+background:#ffddb020;
+filter:blur(120px);
+bottom:-200px;
+right:-200px;
+z-index:-1;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 24px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 20px;
+position:relative;
+}
+
+.hero-box{
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,180,120,0.2);
+padding:80px;
+border-radius:40px;
+max-width:1000px;
+text-align:center;
+box-shadow:
+0 20px 60px rgba(255,170,90,0.12),
+0 8px 20px rgba(0,0,0,0.04);
+position:relative;
+overflow:hidden;
+}
+
+.hero-tag{
+display:inline-block;
+padding:10px 22px;
+border-radius:999px;
+background:#fff3e3;
+color:#dd7a18;
+font-size:13px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:35px;
+}
+
+.hero-title{
+font-size:72px;
+line-height:1.08;
+margin:0 0 30px;
+font-weight:800;
+letter-spacing:-3px;
+color:#4b372c;
+}
+
+.gradient{
+background:linear-gradient(90deg,#ff9d2f,#ff7b00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-desc{
+font-size:21px;
+max-width:760px;
+margin:auto;
+margin-bottom:45px;
+color:#78665c;
+}
+
+.cta{
+display:inline-block;
+padding:22px 70px;
+border-radius:999px;
+background:linear-gradient(90deg,#ff9b2f,#ff7b00);
+color:#fff;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:
+0 12px 30px rgba(255,140,0,0.18);
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+box-shadow:
+0 20px 40px rgba(255,140,0,0.25);
+}
+
+.section{
+padding:120px 20px;
+}
+
+.section-title{
+font-size:48px;
+line-height:1.25;
+text-align:center;
+margin-bottom:20px;
+font-weight:800;
+color:#4b372c;
+}
+
+.line{
+width:120px;
+height:4px;
+margin:28px auto 40px;
+border-radius:999px;
+background:linear-gradient(90deg,#ffb24c,#ff7b00);
+}
+
+.lead{
+max-width:920px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#6f5e54;
+}
+
+.full-img{
+width:100%;
+display:block;
+border-radius:34px;
+margin:70px 0;
+box-shadow:
+0 20px 50px rgba(255,170,90,0.12),
+0 8px 20px rgba(0,0,0,0.04);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin-top:60px;
+}
+
+.card{
+background:#fff;
+border:1px solid #ffe6c7;
+padding:38px;
+border-radius:28px;
+box-shadow:
+0 10px 30px rgba(255,180,100,0.08);
+}
+
+.card h3{
+margin-top:0;
+font-size:24px;
+margin-bottom:14px;
+color:#5a4337;
+}
+
+.card p{
+color:#7a685d;
+}
+
+.soft-box{
+margin-top:70px;
+padding:55px;
+border-radius:34px;
+background:
+linear-gradient(135deg,#fff6ea,#fffdf9);
+border:1px solid #ffe2bf;
+box-shadow:
+0 10px 40px rgba(255,180,100,0.08);
+}
+
+.soft-title{
+font-size:38px;
+margin-top:0;
+margin-bottom:20px;
+color:#503c31;
+}
+
+.soft-box p{
+color:#725f54;
+}
+
+.float-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:40px;
+}
+
+.float-item{
+padding:22px;
+border-radius:18px;
+background:#fff;
+border:1px solid #ffe7cb;
+color:#765d4d;
+}
+
+.seo{
+background:#fff8f0;
+border-top:1px solid #ffe6c8;
+border-bottom:1px solid #ffe6c8;
+}
+
+.seo-text{
+max-width:1000px;
+margin:auto;
+font-size:17px;
+line-height:2.2;
+color:#6f5f55;
+}
+
+.footer{
+padding:50px 20px;
+text-align:center;
+font-size:12px;
+color:#9a8d84;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:100px 20px;
+min-height:auto;
+}
+
+.hero-box{
+padding:45px 25px;
+}
+
+.hero-title{
+font-size:46px;
+}
+
+.hero-desc{
+font-size:17px;
+}
+
+.section{
+padding:85px 20px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.cta{
+width:100%;
+box-sizing:border-box;
+padding:18px 20px;
+}
+
+.soft-box{
+padding:35px 25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-light1"></div>
+<div class="bg-light2"></div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="hero-tag">
+INNER BEAUTY ROUTINE
+</div>
+
+<h1 class="hero-title">
+<span class="gradient">
+毎日に、<br>
+鉄分習慣という選択。
+</span>
+</h1>
+
+<p class="hero-desc">
+忙しい毎日だからこそ、
+内側からのケアをもっと手軽に。
+
+美容と健康を意識する女性たちに選ばれている、
+人気のインナーケアドリンク「豊潤サジー」。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式サイトはこちら
+
+</a>
+
+</div>
+
+</section>
+
+<!-- IMAGE1 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image1.jpg.png">
+
+<h2 class="section-title">
+“なんとなく不調”な毎日に
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+仕事、
+家事、
+育児、
+毎日忙しく過ごしていると、
+自分のケアが後回しになってしまうことも。
+
+豊潤サジーは、
+そんな現代女性のライフスタイルに寄り添う、
+毎日のインナーケア習慣として注目されています。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>朝の美容習慣に</h3>
+<p>
+毎日のルーティンへ取り入れやすい、
+手軽なドリンクタイプ。
+</p>
+</div>
+
+<div class="card">
+<h3>続けやすい設計</h3>
+<p>
+1日30ml〜60mlを目安に、
+自分のペースで続けられます。
+</p>
+</div>
+
+<div class="card">
+<h3>ナチュラル志向</h3>
+<p>
+保存料・香料・着色料不使用。
+自然由来のインナーケア。
+</p>
+</div>
+
+</div>
+
+<div class="soft-box">
+
+<div class="hero-tag">
+DAILY INNER CARE
+</div>
+
+<h3 class="soft-title">
+毎日を整える、
+新しいインナーケア習慣。
+</h3>
+
+<p>
+美容や健康を意識していても、
+忙しい毎日の中で栄養バランスまで完璧に整えるのは簡単ではありません。
+
+豊潤サジーは、
+鉄分やビタミンCをはじめ、
+200種類以上の栄養素を含むサジー果実を使用。
+
+毎日の食生活へ手軽に取り入れやすく、
+美容習慣をサポートするドリンクとして人気を集めています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE2 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image2.jpg.png">
+
+<h2 class="section-title">
+毎日の飲み方を、
+もっと自由に。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+豊潤サジーは酸味のあるドリンクだからこそ、
+さまざまなアレンジで楽しめるのも魅力。
+
+自分に合った飲み方を見つけることで、
+毎日の習慣として続けやすくなります。
+</p>
+
+<div class="float-grid">
+
+<div class="float-item">
+✔ 豆乳割り
+</div>
+
+<div class="float-item">
+✔ 炭酸水割り
+</div>
+
+<div class="float-item">
+✔ オレンジジュース割り
+</div>
+
+<div class="float-item">
+✔ ヨーグルトアレンジ
+</div>
+
+</div>
+
+<div class="soft-box">
+
+<h3 class="soft-title">
+“酸っぱさ”も、
+アレンジ次第で楽しめる。
+</h3>
+
+<p>
+サジー特有の酸味は、
+最初は驚く方もいますが、
+豆乳やジュースで割ることで、
+まろやかで飲みやすい味わいへ。
+
+毎日の気分やライフスタイルに合わせて、
+自由にアレンジできることも、
+豊潤サジーが支持される理由のひとつです。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE3 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image3.jpg.png">
+
+<h2 class="section-title">
+美容と健康を支える、
+豊富な栄養素。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+サジー果実には、
+鉄分だけでなく、
+ビタミンC、
+アミノ酸、
+ミネラル、
+ポリフェノールなど、
+さまざまな栄養素が含まれています。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>鉄分を含有</h3>
+<p>
+毎日の栄養バランスを意識する方にも。
+</p>
+</div>
+
+<div class="card">
+<h3>ビタミンC配合</h3>
+<p>
+美容習慣をサポートする成分として注目。
+</p>
+</div>
+
+<div class="card">
+<h3>植物由来100%</h3>
+<p>
+ナチュラルなインナーケアドリンク。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE4 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image4.jpg.png">
+
+<h2 class="section-title">
+続けやすさも、
+人気の理由。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+毎日続けるものだからこそ、
+始めやすさも重要。
+
+豊潤サジーは、
+初回500円送料無料で試せる定期コースが用意されています。
+</p>
+
+<div class="soft-box">
+
+<div class="hero-tag">
+FIRST TRIAL
+</div>
+
+<h3 class="soft-title">
+まずは気軽に、
+毎日の習慣へ。
+</h3>
+
+<p>
+美容ドリンクは、
+“続けられるか不安”
+と感じる方も少なくありません。
+
+豊潤サジーは、
+初回お試し価格が用意されているため、
+まずは自分のライフスタイルに合うか試しやすいのも魅力。
+
+毎日の美容習慣を見直したい方に、
+注目されているインナーケアドリンクです。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 初回500円で試してみる
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE5 -->
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image5.jpg.png">
+
+<h2 class="section-title">
+“続ける美容習慣”という考え方
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+スキンケアだけでなく、
+毎日の食生活やインナーケアを意識する人が増えている今。
+
+美容習慣も、
+“外側だけではない”
+時代へ変わり始めています。
+</p>
+
+<div class="soft-box" style="text-align:center;">
+
+<div class="hero-tag">
+BEAUTY FROM INSIDE
+</div>
+
+<h3 class="soft-title">
+キレイも、
+毎日の積み重ねから。
+</h3>
+
+<p style="
+max-width:820px;
+margin:30px auto 50px;
+font-size:18px;
+line-height:2.1;
+">
+
+忙しい毎日の中でも、
+自分自身を大切にする時間を少しだけ。
+
+豊潤サジーは、
+そんな“毎日続ける美容習慣”を
+サポートするドリンクとして、
+多くの女性に選ばれています。
+
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 豊潤サジー公式サイトを見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEO -->
+<section class="section seo">
+
+<div class="container">
+
+<h2 class="section-title">
+豊潤サジーとは？
+</h2>
+
+<div class="line"></div>
+
+<div class="seo-text">
+
+豊潤サジーは、
+鉄分やビタミンCなど、
+200種類以上の栄養素を含むサジー果実を使用した人気のインナーケアドリンクです。
+
+美容や健康を意識する女性を中心に支持されており、
+毎日の美容習慣として取り入れる方も増えています。
+
+サジー特有の酸味が特徴ですが、
+豆乳や炭酸水、
+オレンジジュースなどで割ることで、
+自分好みのアレンジを楽しめるのも魅力。
+
+保存料・香料・着色料不使用で、
+植物由来100%のナチュラルドリンクとしても注目されています。
+
+また、
+初回お試し価格が用意されていることから、
+美容ドリンクを初めて試す方にも人気。
+
+忙しい毎日の中で、
+インナーケア習慣を見直したい方から注目されている、
+話題の美容ドリンクです。
+
+</div>
+
+<div style="text-align:center; margin-top:70px;">
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式サイトで詳細を見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+※本ページは広告を含みます
+</div>
+
+</body>
+</html>
