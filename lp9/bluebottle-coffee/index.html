@@ -1,1 +1,999 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 
+<title>Blue Bottle Coffee｜一杯のコーヒーを、もっと美しく。</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Blue Bottle Coffee公式オンラインストアを紹介。スペシャルティコーヒー・ハンドドリップ・ギフト・自宅カフェ・コーヒー豆通販など、洗練されたコーヒー体験を楽しめる人気ブランド。">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#f7f5f1 0%,
+#f1ece5 35%,
+#ffffff 100%
+);
+
+color:#2d2d2d;
+overflow-x:hidden;
+line-height:1.9;
+position:relative;
+}
+
+/* BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+top:-200px;
+right:-180px;
+width:650px;
+height:650px;
+
+background:
+radial-gradient(circle,
+rgba(59,130,246,0.18) 0%,
+transparent 70%);
+
+filter:blur(90px);
+
+z-index:-5;
+}
+
+body::after{
+content:"";
+position:fixed;
+bottom:-200px;
+left:-180px;
+width:700px;
+height:700px;
+
+background:
+radial-gradient(circle,
+rgba(122,90,58,0.14) 0%,
+transparent 70%);
+
+filter:blur(90px);
+
+z-index:-5;
+}
+
+/* COFFEE PATTERN */
+
+.bg-pattern{
+position:fixed;
+inset:0;
+
+background-image:
+url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='120' cy='120' r='52' stroke='%23d9c5ad' stroke-width='2'/%3E%3Cpath d='M165 105C178 105 188 115 188 128C188 141 178 151 165 151' stroke='%23d9c5ad' stroke-width='2'/%3E%3Cpath d='M100 52C112 66 112 82 100 95' stroke='%23d9c5ad' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M126 45C142 63 142 83 126 101' stroke='%23d9c5ad' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+
+opacity:0.13;
+pointer-events:none;
+z-index:-6;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1180px;
+margin:auto;
+padding:0 24px;
+}
+
+/* HERO */
+
+.hero{
+padding:120px 20px 80px;
+position:relative;
+}
+
+.hero-wrap{
+max-width:1180px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:50px;
+align-items:center;
+}
+
+.hero-mini{
+display:inline-block;
+
+padding:10px 18px;
+border-radius:999px;
+
+background:
+rgba(59,130,246,0.08);
+
+border:
+1px solid rgba(59,130,246,0.18);
+
+color:#2563eb;
+
+font-size:12px;
+font-weight:700;
+letter-spacing:3px;
+
+margin-bottom:28px;
+}
+
+.hero-title{
+font-size:86px;
+line-height:1.02;
+letter-spacing:-4px;
+font-weight:800;
+
+color:#1d1d1d;
+
+margin-bottom:34px;
+}
+
+.hero-title span{
+color:#2563eb;
+}
+
+.hero-desc{
+font-size:19px;
+line-height:2;
+color:#5b5b5b;
+max-width:640px;
+margin-bottom:42px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:20px 58px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#3b82f6
+);
+
+color:#fff;
+text-decoration:none;
+font-size:17px;
+font-weight:700;
+
+box-shadow:
+0 18px 45px rgba(37,99,235,0.22);
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+}
+
+.hero-glass{
+
+background:
+rgba(255,255,255,0.55);
+
+backdrop-filter:blur(16px);
+
+border:
+1px solid rgba(255,255,255,0.7);
+
+border-radius:38px;
+
+padding:42px;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:
+0 30px 70px rgba(0,0,0,0.08);
+}
+
+.hero-glass::before{
+content:"";
+
+position:absolute;
+top:-80px;
+right:-80px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(59,130,246,0.18) 0%,
+transparent 70%);
+}
+
+.hero-glass h3{
+position:relative;
+
+font-size:38px;
+line-height:1.3;
+
+margin-bottom:20px;
+
+color:#1d1d1d;
+}
+
+.hero-glass p{
+position:relative;
+
+font-size:16px;
+line-height:2;
+
+color:#5b5b5b;
+}
+
+/* SECTION */
+
+.section{
+padding:72px 20px;
+position:relative;
+}
+
+.section-title{
+font-size:58px;
+line-height:1.15;
+letter-spacing:-2px;
+text-align:center;
+
+margin-bottom:18px;
+
+color:#1d1d1d;
+}
+
+.section-title span{
+color:#2563eb;
+}
+
+.line{
+width:120px;
+height:4px;
+
+margin:0 auto 36px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+90deg,
+#7a5a3a,
+#2563eb
+);
+}
+
+.lead{
+max-width:900px;
+margin:auto;
+
+font-size:18px;
+line-height:2;
+
+text-align:center;
+
+color:#5b5b5b;
+}
+
+/* IMAGE */
+
+.full-img{
+width:100%;
+display:block;
+
+border-radius:34px;
+
+margin:18px 0 38px;
+
+border:
+1px solid rgba(255,255,255,0.8);
+
+box-shadow:
+0 30px 70px rgba(0,0,0,0.12);
+}
+
+/* GLASS PANEL */
+
+.glass-panel{
+
+margin-top:40px;
+
+padding:44px;
+
+border-radius:36px;
+
+background:
+rgba(255,255,255,0.52);
+
+backdrop-filter:blur(18px);
+
+border:
+1px solid rgba(255,255,255,0.75);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.08);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.glass-panel::before{
+content:"";
+
+position:absolute;
+right:-90px;
+top:-90px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(37,99,235,0.16) 0%,
+transparent 70%);
+}
+
+.glass-mini{
+position:relative;
+
+display:inline-block;
+
+padding:9px 16px;
+
+border-radius:999px;
+
+background:
+rgba(37,99,235,0.08);
+
+border:
+1px solid rgba(37,99,235,0.16);
+
+font-size:12px;
+font-weight:700;
+letter-spacing:3px;
+
+color:#2563eb;
+
+margin-bottom:18px;
+}
+
+.glass-panel h3{
+position:relative;
+
+font-size:42px;
+line-height:1.25;
+letter-spacing:-1px;
+
+margin-bottom:22px;
+
+color:#1d1d1d;
+}
+
+.glass-panel p{
+position:relative;
+
+font-size:17px;
+line-height:2.1;
+
+color:#555;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:22px;
+
+margin-top:36px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,0.58);
+
+backdrop-filter:blur(14px);
+
+border:
+1px solid rgba(255,255,255,0.8);
+
+border-radius:28px;
+
+padding:32px;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.06);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+
+position:absolute;
+top:-40px;
+right:-40px;
+
+width:120px;
+height:120px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(37,99,235,0.10) 0%,
+transparent 70%);
+}
+
+.card h3{
+position:relative;
+
+font-size:24px;
+
+margin-bottom:14px;
+
+color:#1d1d1d;
+}
+
+.card p{
+position:relative;
+
+font-size:15px;
+line-height:1.9;
+
+color:#5b5b5b;
+}
+
+/* SEO */
+
+.seo{
+padding:90px 20px;
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,0.55),
+rgba(241,236,229,0.75)
+);
+
+border-top:
+1px solid rgba(255,255,255,0.9);
+
+border-bottom:
+1px solid rgba(255,255,255,0.9);
+}
+
+.seo-text{
+max-width:1040px;
+margin:auto;
+
+font-size:17px;
+line-height:2.3;
+
+color:#555;
+}
+
+.seo-text h3{
+font-size:36px;
+line-height:1.3;
+
+margin:
+70px 0 24px;
+
+letter-spacing:-1px;
+
+color:#1d1d1d;
+}
+
+/* FOOTER */
+
+.footer{
+padding:40px 20px;
+text-align:center;
+
+font-size:12px;
+
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-wrap{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:90px 20px 60px;
+}
+
+.hero-title{
+font-size:56px;
+letter-spacing:-2px;
+}
+
+.section{
+padding:58px 20px;
+}
+
+.section-title{
+font-size:40px;
+}
+
+.glass-panel{
+padding:32px 24px;
+}
+
+.glass-panel h3{
+font-size:30px;
+}
+
+.cta{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-pattern"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-wrap">
+
+<div>
+
+<div class="hero-mini">
+SPECIALTY COFFEE EXPERIENCE
+</div>
+
+<h1 class="hero-title">
+一杯のコーヒーを、<br>
+もっと<span>美しく。</span>
+</h1>
+
+<p class="hero-desc">
+Blue Bottle Coffeeは、
+世界中から厳選したコーヒー豆と、
+丁寧な焙煎・抽出によって、
+静かで豊かなコーヒー体験を届ける
+スペシャルティコーヒーブランドです。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式オンラインストアを見る
+
+</a>
+
+</div>
+
+<div class="hero-glass">
+
+<h3>
+コーヒーを、
+もっと未来的な体験へ。
+</h3>
+
+<p>
+香り、
+湯気、
+光、
+余韻。
+
+Blue Bottle Coffeeは、
+一杯のコーヒーを通して、
+空間そのものをデザインするような
+ライフスタイルブランドとして支持されています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE1 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image1.jpg.png">
+
+<h2 class="section-title">
+<span>スペシャルティ</span>コーヒーという、<br>
+新しい日常。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+世界中から選び抜かれたコーヒー豆を、
+豆ごとに異なる焙煎設計で仕上げる。
+
+Blue Bottle Coffeeは、
+一杯ごとの個性を大切にしています。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>厳選されたコーヒー豆</h3>
+<p>
+季節ごとに最適な豆を買い付け。
+</p>
+</div>
+
+<div class="card">
+<h3>自社ロースタリー</h3>
+<p>
+豆ごとの個性を引き出す焙煎設計。
+</p>
+</div>
+
+<div class="card">
+<h3>フレッシュな味わい</h3>
+<p>
+ピークフレーバー期間を重視。
+</p>
+</div>
+
+</div>
+
+<div class="glass-panel">
+
+<div class="glass-mini">
+FRESH ROASTED
+</div>
+
+<h3>
+“鮮度”を、<br>
+もっと丁寧に。
+</h3>
+
+<p>
+Blue Bottle Coffeeでは、
+焙煎後の鮮度にもこだわり、
+コーヒー豆が最も美味しく感じられる
+タイミングを重視しています。
+
+コーヒー豆本来の香りや甘み、
+余韻を楽しめることも魅力です。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE2 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image2.jpg.png">
+
+<h2 class="section-title">
+焙煎という、<br>
+<span>クラフト。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+産地や品種ごとに異なる個性を、
+最適な焙煎によって引き出しています。
+</p>
+
+<div class="glass-panel">
+
+<div class="glass-mini">
+ROASTERY EXPERIENCE
+</div>
+
+<h3>
+一杯ごとに、<br>
+違う風味。
+</h3>
+
+<p>
+フルーティーな酸味、
+ナッツ感、
+チョコレートのような甘み。
+
+Blue Bottle Coffeeでは、
+豆ごとの個性を最大限に活かすため、
+焙煎設計や抽出バランスにもこだわっています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE3 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image3.jpg.png">
+
+<h2 class="section-title">
+<span>ハンドドリップ</span>が生み出す、<br>
+静かな時間。
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+お湯を注ぎ、
+ゆっくりと抽出する。
+
+その時間そのものが、
+コーヒー体験になります。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>丁寧な抽出</h3>
+<p>
+一杯ずつ風味を引き出す抽出スタイル。
+</p>
+</div>
+
+<div class="card">
+<h3>香りを楽しむ</h3>
+<p>
+広がるアロマや余韻も魅力。
+</p>
+</div>
+
+<div class="card">
+<h3>自宅カフェ</h3>
+<p>
+自宅でも本格的な体験を楽しめる。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE4 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image4.jpg.png">
+
+<h2 class="section-title">
+ギフトとしても、<br>
+<span>人気。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+コーヒー豆だけではなく、
+マグカップや限定グッズなども展開。
+</p>
+
+<div class="glass-panel">
+
+<div class="glass-mini">
+GIFT & LIFESTYLE
+</div>
+
+<h3>
+“贈りたくなる”<br>
+コーヒーブランドへ。
+</h3>
+
+<p>
+洗練されたデザインと、
+スペシャルティコーヒー文化を感じられる
+世界観。
+
+誕生日やギフト需要との相性も良く、
+幅広い世代から支持されています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE5 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img" src="image5.jpg.png">
+
+<h2 class="section-title">
+一杯のコーヒーを、<br>
+もっと<span>特別に。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+Blue Bottle Coffeeは、
+コーヒーだけではなく、
+その時間や空間までデザインする
+ライフスタイルブランドです。
+</p>
+
+<div class="glass-panel"
+style="text-align:center;">
+
+<div class="glass-mini">
+SPECIALTY COFFEE BRAND
+</div>
+
+<h3>
+“おいしい”を、<br>
+もっと美しく。
+</h3>
+
+<p style="
+max-width:860px;
+margin:30px auto 50px;
+">
+
+スペシャルティコーヒー、
+ハンドドリップ、
+ロースタリー、
+ギフト。
+
+Blue Bottle Coffeeは、
+一杯のコーヒーを丁寧に楽しみたい人へ向けた、
+新しいコーヒー体験を提案しています。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式サイトを見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEO -->
+
+<section class="seo">
+
+<div class="container">
+
+<h2 class="section-title">
+Blue Bottle Coffeeとは？
+</h2>
+
+<div class="line"></div>
+
+<div class="seo-text">
+
+<h3>
+スペシャルティコーヒー文化を代表するブランド
+</h3>
+
+<p>
+Blue Bottle Coffeeは、
+世界中から厳選したコーヒー豆を使用し、
+焙煎・鮮度・抽出方法にまでこだわる
+スペシャルティコーヒーブランドです。
+
+一杯ずつ丁寧に抽出する
+ハンドドリップスタイルを中心に、
+コーヒーそのものだけではなく、
+空間やライフスタイルまで含めた
+ブランド体験を提案しています。
+</p>
+
+<h3>
+自宅カフェ需要やギフト人気も高い
+</h3>
+
+<p>
+Blue Bottle Coffeeでは、
+コーヒー豆だけではなく、
+グッズやマグカップ、
+ギフトセットなども人気。
+
+洗練された世界観やデザイン性から、
+自宅カフェを楽しみたい方や、
+コーヒー好きへのプレゼントとしても
+注目されています。
+</p>
+
+</div>
+
+<div style="
+text-align:center;
+margin-top:70px;
+">
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+▶ 公式オンラインストアを見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+※本ページは広告を含みます
+</div>
+
+</body>
+</html>
