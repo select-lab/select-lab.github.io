@@ -1,1 +1,975 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>肌に、静かなうるおいを。｜DESERT OIL BEAUTY</title>
+
+<meta name="description" content="100％天然オイル、自然派スキンケア、乾燥肌ケア、敏感肌向けフェイスオイルなどを紹介。静かな高級感をテーマにした美容系LP。">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+-apple-system,
+BlinkMacSystemFont,
+sans-serif;
+
+background:
+#f7f2ea;
+
+color:#3f372f;
+
+line-height:2;
+
+overflow-x:hidden;
+
+position:relative;
+}
+
+/* BACKGROUND */
+
+body::before{
+content:"";
+
+position:fixed;
+
+top:-300px;
+right:-200px;
+
+width:700px;
+height:700px;
+
+background:
+radial-gradient(circle,
+rgba(219,191,145,0.28) 0%,
+transparent 70%);
+
+filter:blur(80px);
+
+z-index:-5;
+}
+
+body::after{
+content:"";
+
+position:fixed;
+
+bottom:-250px;
+left:-150px;
+
+width:600px;
+height:600px;
+
+background:
+radial-gradient(circle,
+rgba(255,255,255,0.8) 0%,
+transparent 70%);
+
+filter:blur(80px);
+
+z-index:-5;
+}
+
+/* ORGANIC SHADOW */
+
+.organic{
+position:fixed;
+inset:0;
+
+background-image:
+url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 120C60 90 100 90 140 120' stroke='%23d8c2a7' stroke-width='1.2'/%3E%3Cpath d='M180 190C220 160 250 170 280 200' stroke='%23e5d7c5' stroke-width='1.2'/%3E%3Ccircle cx='90' cy='210' r='2' fill='%23dbc6ad'/%3E%3Ccircle cx='240' cy='70' r='2' fill='%23dbc6ad'/%3E%3C/svg%3E");
+
+opacity:0.45;
+
+pointer-events:none;
+
+z-index:-6;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1160px;
+margin:auto;
+padding:0 28px;
+}
+
+/* HERO */
+
+.hero{
+padding:
+140px 20px
+110px;
+
+position:relative;
+}
+
+.hero-wrap{
+display:grid;
+grid-template-columns:
+1.05fr 0.95fr;
+
+gap:80px;
+
+align-items:center;
+}
+
+.hero-mini{
+
+font-size:12px;
+letter-spacing:5px;
+font-weight:600;
+
+color:#b88e5f;
+
+margin-bottom:28px;
+}
+
+.hero-title{
+
+font-size:96px;
+line-height:0.95;
+letter-spacing:-5px;
+font-weight:300;
+
+margin-bottom:40px;
+
+color:#342d27;
+}
+
+.hero-title span{
+font-style:italic;
+color:#b78a58;
+}
+
+.hero-desc{
+font-size:18px;
+line-height:2.3;
+
+max-width:620px;
+
+color:#6b635d;
+
+margin-bottom:46px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+18px 56px;
+
+border-radius:999px;
+
+background:
+#b78a58;
+
+color:#fff;
+text-decoration:none;
+
+font-size:15px;
+letter-spacing:2px;
+font-weight:600;
+
+transition:0.3s;
+
+box-shadow:
+0 16px 40px rgba(183,138,88,0.22);
+}
+
+.cta:hover{
+transform:translateY(-3px);
+background:#a37749;
+}
+
+/* HERO CARD */
+
+.hero-card{
+
+background:
+rgba(255,255,255,0.52);
+
+backdrop-filter:blur(10px);
+
+border:
+1px solid rgba(255,255,255,0.9);
+
+padding:60px;
+
+border-radius:48px;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.05);
+}
+
+.hero-card::before{
+content:"";
+
+position:absolute;
+
+top:-100px;
+right:-100px;
+
+width:280px;
+height:280px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(219,191,145,0.24) 0%,
+transparent 70%);
+}
+
+.hero-card h3{
+position:relative;
+
+font-size:42px;
+font-weight:300;
+line-height:1.3;
+
+margin-bottom:24px;
+
+color:#352d27;
+}
+
+.hero-card p{
+position:relative;
+
+font-size:16px;
+line-height:2.2;
+
+color:#6f655d;
+}
+
+/* SECTION */
+
+.section{
+padding:90px 20px;
+position:relative;
+}
+
+.section-title{
+
+font-size:64px;
+line-height:1.08;
+font-weight:300;
+letter-spacing:-3px;
+
+text-align:center;
+
+margin-bottom:24px;
+
+color:#352d27;
+}
+
+.section-title span{
+font-style:italic;
+color:#b78a58;
+}
+
+.line{
+width:120px;
+height:1px;
+
+margin:
+0 auto 42px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#b78a58,
+transparent
+);
+}
+
+.lead{
+max-width:920px;
+margin:auto;
+
+font-size:18px;
+line-height:2.3;
+
+text-align:center;
+
+color:#6e655d;
+}
+
+/* IMAGE */
+
+.full-img{
+width:100%;
+display:block;
+
+margin:
+10px 0 40px;
+
+border-radius:42px;
+
+box-shadow:
+0 35px 90px rgba(0,0,0,0.08);
+}
+
+/* PANEL */
+
+.panel{
+
+margin-top:44px;
+
+padding:56px;
+
+background:
+rgba(255,255,255,0.54);
+
+border:
+1px solid rgba(255,255,255,0.88);
+
+border-radius:42px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 24px 70px rgba(0,0,0,0.05);
+}
+
+.panel-mini{
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#b78a58;
+
+margin-bottom:18px;
+}
+
+.panel h3{
+font-size:42px;
+line-height:1.3;
+font-weight:300;
+
+margin-bottom:24px;
+
+color:#352d27;
+}
+
+.panel p{
+font-size:17px;
+line-height:2.2;
+
+color:#6d655e;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:28px;
+
+margin-top:40px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,0.45);
+
+border:
+1px solid rgba(255,255,255,0.85);
+
+border-radius:34px;
+
+padding:38px;
+
+box-shadow:
+0 18px 50px rgba(0,0,0,0.04);
+}
+
+.card h3{
+font-size:26px;
+font-weight:400;
+
+margin-bottom:14px;
+
+color:#352d27;
+}
+
+.card p{
+font-size:15px;
+line-height:2;
+
+color:#6c655d;
+}
+
+/* TAG */
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+
+margin-top:36px;
+}
+
+.tag{
+padding:
+12px 18px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,0.7);
+
+border:
+1px solid rgba(255,255,255,0.9);
+
+font-size:13px;
+letter-spacing:1px;
+
+color:#9b744a;
+}
+
+/* SEO */
+
+.seo{
+padding:
+100px 20px;
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,0.5),
+rgba(243,234,223,0.7)
+);
+
+border-top:
+1px solid rgba(255,255,255,0.8);
+
+border-bottom:
+1px solid rgba(255,255,255,0.8);
+}
+
+.seo-inner{
+max-width:1000px;
+margin:auto;
+}
+
+.seo h3{
+font-size:40px;
+font-weight:300;
+line-height:1.3;
+
+margin:
+70px 0 24px;
+
+color:#352d27;
+}
+
+.seo p{
+font-size:17px;
+line-height:2.4;
+
+color:#6b655d;
+}
+
+/* FOOTER */
+
+.footer{
+padding:44px 20px;
+
+text-align:center;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+color:#998c80;
+}
+
+/* MOBILE */
+
+@media(max-width:920px){
+
+.hero-wrap{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.hero{
+padding:100px 20px 70px;
+}
+
+.hero-title{
+font-size:62px;
+letter-spacing:-2px;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.section-title{
+font-size:44px;
+}
+
+.hero-card,
+.panel{
+padding:36px 28px;
+}
+
+.panel h3,
+.hero-card h3{
+font-size:32px;
+}
+
+.cta{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="organic"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-wrap">
+
+<div>
+
+<div class="hero-mini">
+DESERT OIL BEAUTY
+</div>
+
+<h1 class="hero-title">
+肌に、<br>
+<span>静かな</span><br>
+うるおいを。
+</h1>
+
+<p class="hero-desc">
+自然由来の美容オイル、
+敏感肌向けスキンケア、
+乾燥肌ケア。
+
+“塗るだけ”ではなく、
+肌を整えるという新しい美容習慣へ。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+</div>
+
+<div class="hero-card">
+
+<h3>
+100％天然という、
+贅沢。
+</h3>
+
+<p>
+乾燥しやすい毎日の肌に、
+静かに寄り添うオイルケア。
+
+DESERT OIL BEAUTYでは、
+自然由来のスキンケアアイテムを中心に、
+うるおいと透明感のある美容習慣を提案しています。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE1 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img"
+src="image1.jpg.png"
+alt="高級感のある美容オイル">
+
+<h2 class="section-title">
+自然由来の、<br>
+<span>うるおい。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+肌なじみの良い美容オイルは、
+毎日のスキンケアに取り入れやすい人気アイテム。
+
+乾燥が気になる季節にも、
+しっとり感をサポートします。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>フェイスオイル</h3>
+<p>
+肌をやさしく包み込む保湿ケア。
+</p>
+</div>
+
+<div class="card">
+<h3>自然派スキンケア</h3>
+<p>
+毎日の美容習慣に取り入れやすい。
+</p>
+</div>
+
+<div class="card">
+<h3>乾燥肌ケア</h3>
+<p>
+うるおいを守りながら肌を整える。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE2 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img"
+src="image2.jpg.png"
+alt="透明感のあるフェイスオイル">
+
+<h2 class="section-title">
+静かな美容時間を、<br>
+<span>もっと心地よく。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+忙しい毎日だからこそ、
+肌を整える時間を大切に。
+</p>
+
+<div class="panel">
+
+<div class="panel-mini">
+NATURAL OIL CARE
+</div>
+
+<h3>
+軽やかに、
+しっとり。
+</h3>
+
+<p>
+肌表面だけではなく、
+角質層までうるおいを与えるような、
+なめらかな使用感。
+
+ベタつきにくく、
+季節を問わず使いやすい美容オイルです。
+</p>
+
+<div class="tags">
+
+<div class="tag"># 保湿ケア</div>
+<div class="tag"># 敏感肌</div>
+<div class="tag"># フェイスオイル</div>
+<div class="tag"># ナチュラル美容</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE3 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img"
+src="image3.jpg.png"
+alt="乾燥肌向け美容オイル">
+
+<h2 class="section-title">
+毎日の肌に、<br>
+<span>やさしく。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+乾燥や肌荒れが気になる時にも、
+やさしく使える美容アイテムが人気です。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>シンプルケア</h3>
+<p>
+必要以上に重ねない美容習慣。
+</p>
+</div>
+
+<div class="card">
+<h3>全身ケアにも</h3>
+<p>
+顔だけでなくボディにも使いやすい。
+</p>
+</div>
+
+<div class="card">
+<h3>肌なじみの良さ</h3>
+<p>
+自然なツヤ感とうるおいを演出。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE4 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img"
+src="image4.jpg.png"
+alt="自然派美容のイメージ">
+
+<h2 class="section-title">
+美容を、<br>
+<span>もっとシンプルに。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+毎日のスキンケアを、
+もっと自然体に。
+</p>
+
+<div class="panel">
+
+<div class="panel-mini">
+ORGANIC BEAUTY STYLE
+</div>
+
+<h3>
+肌と向き合う、
+静かな時間。
+</h3>
+
+<p>
+余計なものを増やさず、
+肌本来の美しさを整えるようなスキンケア。
+
+自然派美容や、
+シンプルな美容習慣を大切にしたい方にもおすすめです。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE5 -->
+
+<section class="section">
+
+<div class="container">
+
+<img class="full-img"
+src="image5.jpg.png"
+alt="高級感のあるスキンケアブランド">
+
+<h2 class="section-title">
+素肌を、<br>
+<span>もっと美しく。</span>
+</h2>
+
+<div class="line"></div>
+
+<p class="lead">
+自然由来の美容アイテムで、
+毎日のスキンケアをもっと心地よく。
+</p>
+
+<div class="panel" style="text-align:center;">
+
+<div class="panel-mini">
+DESERT OIL COLLECTION
+</div>
+
+<h3>
+自然の力を、
+美容へ。
+</h3>
+
+<p style="
+max-width:820px;
+margin:30px auto 50px;
+">
+
+乾燥肌ケア、
+敏感肌ケア、
+全身保湿など、
+さまざまな美容シーンで使いやすい自然派オイル。
+
+うるおいのある、
+なめらかな肌へ導きます。
+</p>
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+VIEW MORE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEO -->
+
+<section class="seo">
+
+<div class="seo-inner">
+
+<h2 class="section-title">
+天然オイル美容とは？
+</h2>
+
+<div class="line"></div>
+
+<h3>
+自然由来のスキンケアが人気
+</h3>
+
+<p>
+近年では、
+シンプルな成分構成のスキンケアや、
+自然由来の美容オイルに注目が集まっています。
+
+乾燥肌ケアや保湿ケアとして、
+毎日の美容習慣に取り入れる方も増えています。
+</p>
+
+<h3>
+フェイスオイル・ボディオイルとしても
+</h3>
+
+<p>
+美容オイルは、
+顔だけでなく、
+ボディケアやハンドケアなどにも使いやすいのが特徴。
+
+うるおいを与えながら、
+自然なツヤ感を演出できます。
+</p>
+
+<h3>
+こんな方におすすめ
+</h3>
+
+<p>
+・乾燥肌が気になる方
+
+・敏感肌向けスキンケアを探している方
+
+・自然派美容が好きな方
+
+・シンプルケアを取り入れたい方
+
+・フェイスオイルを試したい方
+
+・全身保湿アイテムを探している方
+</p>
+
+<div style="
+text-align:center;
+margin-top:70px;
+">
+
+<a class="cta"
+href="#"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+DESERT OIL BEAUTY
+</div>
+
+</body>
+</html>
