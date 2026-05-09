@@ -1,1 +1,982 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>deep-lift-lab | FUTURE FACE DEVICE</title>
+
+<meta name="description" content="次世代EMS美容デバイス・未来型フェイスケア・テクノロジー美容を紹介するLP。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:#f2f4f8;
+
+color:#111;
+
+overflow-x:hidden;
+}
+
+/* NOISE */
+
+.noise{
+position:fixed;
+inset:0;
+
+background-image:
+radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+
+background-size:4px 4px;
+
+pointer-events:none;
+
+opacity:0.4;
+
+z-index:-20;
+}
+
+/* TOP BAR */
+
+.topbar{
+width:100%;
+
+padding:26px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+position:fixed;
+
+top:0;
+left:0;
+
+z-index:999;
+
+mix-blend-mode:difference;
+}
+
+.logo{
+font-size:13px;
+letter-spacing:5px;
+font-weight:700;
+
+color:white;
+}
+
+.menu{
+font-size:12px;
+letter-spacing:4px;
+
+color:white;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+
+display:grid;
+grid-template-columns:
+1.15fr 0.85fr;
+
+background:#0d1016;
+}
+
+.hero-left{
+padding:
+160px 7vw
+100px;
+
+position:relative;
+overflow:hidden;
+}
+
+.hero-left::before{
+content:"";
+
+position:absolute;
+
+top:-220px;
+left:-200px;
+
+width:700px;
+height:700px;
+
+background:
+radial-gradient(circle,
+rgba(70,210,255,0.28),
+transparent 70%);
+
+filter:blur(60px);
+}
+
+.hero-mini{
+position:relative;
+
+font-size:12px;
+letter-spacing:6px;
+font-weight:700;
+
+color:#7be3ff;
+
+margin-bottom:34px;
+}
+
+.hero-title{
+position:relative;
+
+font-size:9vw;
+line-height:0.88;
+letter-spacing:-0.5vw;
+font-weight:200;
+
+color:white;
+
+margin-bottom:42px;
+}
+
+.hero-desc{
+position:relative;
+
+max-width:560px;
+
+font-size:18px;
+line-height:2.2;
+
+color:#c8d3df;
+
+margin-bottom:50px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+22px 58px;
+
+background:white;
+
+border-radius:999px;
+
+text-decoration:none;
+
+color:#111;
+
+font-size:14px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:scale(1.04);
+}
+
+/* HERO RIGHT */
+
+.hero-right{
+background:
+linear-gradient(
+180deg,
+#dbe4f0 0%,
+#f6f8fb 100%
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:40px;
+
+position:relative;
+overflow:hidden;
+}
+
+.hero-right::before{
+content:"";
+
+position:absolute;
+
+width:480px;
+height:480px;
+
+border-radius:50%;
+
+border:
+1px solid rgba(0,0,0,0.08);
+}
+
+.hero-right::after{
+content:"";
+
+position:absolute;
+
+width:680px;
+height:680px;
+
+border-radius:50%;
+
+border:
+1px solid rgba(0,0,0,0.04);
+}
+
+.tech-box{
+position:relative;
+
+width:100%;
+max-width:430px;
+
+padding:55px;
+
+background:white;
+
+border-radius:36px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.08);
+
+z-index:2;
+}
+
+.tech-number{
+font-size:90px;
+font-weight:100;
+line-height:1;
+
+color:#dce3ea;
+
+margin-bottom:10px;
+}
+
+.tech-box h3{
+font-size:38px;
+line-height:1.2;
+font-weight:300;
+
+margin-bottom:22px;
+
+color:#111;
+}
+
+.tech-box p{
+font-size:16px;
+line-height:2.1;
+
+color:#5c6672;
+}
+
+/* IMAGE STRIP */
+
+.image-strip{
+padding:40px 0;
+background:#fff;
+overflow:hidden;
+}
+
+.image-track{
+display:flex;
+gap:24px;
+
+padding-left:40px;
+}
+
+.strip-card{
+min-width:440px;
+border-radius:28px;
+overflow:hidden;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.08);
+}
+
+.strip-card img{
+width:100%;
+display:block;
+}
+
+/* SECTION */
+
+.section{
+padding:130px 7vw;
+position:relative;
+}
+
+.section-dark{
+background:#0f141d;
+color:white;
+}
+
+.label{
+font-size:12px;
+letter-spacing:6px;
+font-weight:700;
+
+margin-bottom:24px;
+
+color:#77dbff;
+}
+
+.big-title{
+font-size:7vw;
+line-height:0.95;
+letter-spacing:-0.35vw;
+font-weight:200;
+
+margin-bottom:38px;
+}
+
+.text{
+max-width:760px;
+
+font-size:18px;
+line-height:2.3;
+
+color:#6b7684;
+}
+
+.section-dark .text{
+color:#bcc7d5;
+}
+
+/* SPLIT */
+
+.split{
+margin-top:80px;
+
+display:grid;
+grid-template-columns:
+1fr 1fr;
+
+gap:40px;
+}
+
+.white-card{
+background:white;
+
+padding:46px;
+
+border-radius:34px;
+
+box-shadow:
+0 25px 70px rgba(0,0,0,0.08);
+}
+
+.white-card h3{
+font-size:34px;
+line-height:1.25;
+font-weight:300;
+
+margin-bottom:20px;
+}
+
+.white-card p{
+font-size:16px;
+line-height:2.1;
+
+color:#5c6672;
+}
+
+/* FLOAT */
+
+.float-layout{
+display:grid;
+grid-template-columns:
+0.9fr 1.1fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.float-panel{
+background:white;
+
+padding:60px;
+
+border-radius:40px;
+
+transform:rotate(-2deg);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.08);
+}
+
+.float-panel h3{
+font-size:42px;
+line-height:1.2;
+font-weight:300;
+
+margin-bottom:24px;
+}
+
+.float-panel p{
+font-size:17px;
+line-height:2.2;
+
+color:#5e6876;
+}
+
+/* FULL IMAGE */
+
+.full-img{
+width:100%;
+display:block;
+
+border-radius:36px;
+
+box-shadow:
+0 30px 90px rgba(0,0,0,0.12);
+
+transition:0.3s;
+}
+
+.full-img:hover{
+transform:translateY(-5px);
+}
+
+/* CTA AREA */
+
+.cta-section{
+padding:
+140px 7vw;
+
+background:
+linear-gradient(
+135deg,
+#0e131d 0%,
+#1a2331 100%
+);
+
+text-align:center;
+
+position:relative;
+overflow:hidden;
+}
+
+.cta-section::before{
+content:"";
+
+position:absolute;
+
+top:-250px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:900px;
+height:900px;
+
+background:
+radial-gradient(circle,
+rgba(84,203,255,0.18),
+transparent 70%);
+}
+
+.cta-title{
+position:relative;
+
+font-size:7vw;
+line-height:0.9;
+letter-spacing:-0.4vw;
+font-weight:200;
+
+color:white;
+
+margin-bottom:40px;
+}
+
+.cta-text{
+position:relative;
+
+max-width:760px;
+margin:auto;
+
+font-size:18px;
+line-height:2.2;
+
+color:#c3cedd;
+
+margin-bottom:50px;
+}
+
+/* FOOTER */
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:12px;
+letter-spacing:4px;
+
+background:#0b0f16;
+
+color:#7c8797;
+}
+
+/* MOBILE */
+
+@media(max-width:920px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:70px;
+letter-spacing:-3px;
+}
+
+.big-title{
+font-size:56px;
+letter-spacing:-2px;
+}
+
+.cta-title{
+font-size:56px;
+letter-spacing:-2px;
+}
+
+.split,
+.float-layout{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:90px 24px;
+}
+
+.hero-left{
+padding:120px 24px 80px;
+}
+
+.hero-right{
+padding:24px;
+}
+
+.float-panel,
+.tech-box,
+.white-card{
+padding:34px 26px;
+}
+
+.image-track{
+padding-left:20px;
+}
+
+.strip-card{
+min-width:320px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<div class="topbar">
+
+<div class="logo">
+DEEP LIFT LAB
+</div>
+
+<div class="menu">
+FUTURE BEAUTY
+</div>
+
+</div>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="hero-mini">
+NEXT GENERATION DEVICE
+</div>
+
+<h1 class="hero-title">
+FACE<br>
+TECH<br>
+SYSTEM
+</h1>
+
+<p class="hero-desc">
+スキンケアとテクノロジーを融合した、
+次世代型ビューティーデバイス。
+
+毎日の美容習慣を、
+もっとスマートに、
+もっと未来的に。
+</p>
+
+<!-- ▼ ここにアフィリエイトリンクを入れる ▼ -->
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+DISCOVER
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="tech-box">
+
+<div class="tech-number">
+01
+</div>
+
+<h3>
+Future<br>
+Beauty<br>
+Device
+</h3>
+
+<p>
+美容家電は、
+“塗るケア”から
+“テクノロジーケア”へ。
+
+新しい美容体験を求める人に、
+未来型ビューティーデバイスが注目されています。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="image-strip">
+
+<div class="image-track">
+
+<div class="strip-card">
+
+<!-- ▼ ここに画像1を入れる（image1.jpg.png） ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image1.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+<div class="strip-card">
+
+<!-- ▼ ここに画像2を入れる（image2.jpg.png） ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="label">
+TECH BEAUTY EXPERIENCE
+</div>
+
+<h2 class="big-title">
+SMART<br>
+SKINCARE
+</h2>
+
+<p class="text">
+美容習慣そのものをアップデートしたい人へ。
+
+高機能デバイスを取り入れることで、
+毎日のスキンケア時間を、
+より洗練されたルーティンへ変えていく人が増えています。
+</p>
+
+<div class="split">
+
+<div class="white-card">
+
+<h3>
+洗練された、
+未来型デザイン
+</h3>
+
+<p>
+美容家電において、
+機能性だけではなく、
+デザイン性を重視する人も増えています。
+
+インテリアのようになじむ、
+ミニマルな未来デザインにも注目が集まっています。
+</p>
+
+</div>
+
+<div class="white-card">
+
+<h3>
+毎日の美容時間を、
+もっと効率的に
+</h3>
+
+<p>
+忙しい毎日だからこそ、
+短時間でスマートに使いやすい美容デバイスが人気です。
+
+シンプルな操作性も、
+継続しやすい理由のひとつです。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section section-dark">
+
+<div class="float-layout">
+
+<div>
+
+<div class="label">
+NEXT BEAUTY STYLE
+</div>
+
+<h2 class="big-title">
+HIGH-END<br>
+EMS CARE
+</h2>
+
+<p class="text">
+テクノロジー美容の進化によって、
+自宅での美容時間も大きく変化しています。
+
+毎日のルーティンを、
+よりスマートで未来的な体験へ。
+</p>
+
+</div>
+
+<div class="float-panel">
+
+<h3>
+スマート美容は、
+次の時代へ。
+</h3>
+
+<p>
+高機能美容機器を取り入れた
+“未来型美容習慣”が注目されています。
+
+ラグジュアリー感とテクノロジーを融合した、
+新しいスキンケアスタイルへ。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<!-- ▼ ここに画像3を入れる（image3.jpg.png） ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img class="full-img"
+src="image3.jpg.png"
+alt="">
+
+</a>
+
+</section>
+
+<section class="section">
+
+<div class="split">
+
+<div>
+
+<div class="label">
+FUTURE ROUTINE
+</div>
+
+<h2 class="big-title">
+SMART<br>
+DAILY<br>
+CARE
+</h2>
+
+<p class="text">
+毎日のスキンケア時間を、
+もっと特別な時間へ。
+
+テクノロジー美容を取り入れる人が、
+今増えています。
+</p>
+
+</div>
+
+<div>
+
+<!-- ▼ ここに画像4を入れる（image4.jpg.png） ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img class="full-img"
+src="image4.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section section-dark">
+
+<div class="split">
+
+<div>
+
+<!-- ▼ ここに画像5を入れる（image5.jpg.png） ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img class="full-img"
+src="image5.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+<div>
+
+<div class="label">
+TECHNOLOGY × BEAUTY
+</div>
+
+<h2 class="big-title">
+DEEP<br>
+LIFT<br>
+LAB
+</h2>
+
+<p class="text">
+未来型ビューティーデバイスで、
+毎日の美容ルーティンをさらに進化。
+
+高機能美容家電に注目する人が、
+今増えています。
+</p>
+
+<br><br>
+
+<!-- ▼ ここにアフィリエイトリンクを入れる ▼ -->
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW MORE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta-section">
+
+<h2 class="cta-title">
+FUTURE<br>
+FACE CARE
+</h2>
+
+<p class="cta-text">
+美容時間を、
+もっとスマートに、
+もっと未来的に。
+
+次世代型ビューティーデバイスを、
+毎日のルーティンへ。
+</p>
+
+<!-- ▼ ここにアフィリエイトリンクを入れる ▼ -->
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+</section>
+
+<div class="footer">
+DEEP LIFT LAB
+</div>
+
+<!-- ▼ ここにA8計測gifを入れる ▼ -->
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
