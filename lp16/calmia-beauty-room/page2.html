@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MEDICAL BEAUTY GUIDE | CALMIA SKIN AESTHETIC</title>
+
+<meta name="description" content="女性専用医療脱毛・美容皮膚科・美肌ケア・美容医療について詳しく紹介する特集ページ。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#fff8fc 0%,
+#ffffff 35%,
+#fcf7ff 100%
+);
+
+color:#352d34;
+
+line-height:1.95;
+
+overflow-x:hidden;
+}
+
+/* background */
+
+.bg-grid{
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+rgba(255,182,216,0.08) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(255,182,216,0.08) 1px,
+transparent 1px
+);
+
+background-size:42px 42px;
+
+z-index:-30;
+}
+
+.glow{
+position:fixed;
+
+width:700px;
+height:700px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,160,210,0.18),
+transparent 70%
+);
+
+top:-200px;
+right:-120px;
+
+z-index:-20;
+}
+
+.glow2{
+position:fixed;
+
+width:600px;
+height:600px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,220,240,0.18),
+transparent 70%
+);
+
+bottom:-180px;
+left:-120px;
+
+z-index:-20;
+}
+
+/* header */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:24px 42px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+
+background:
+rgba(255,255,255,0.78);
+
+backdrop-filter:blur(16px);
+
+border-bottom:
+1px solid rgba(255,182,216,0.22);
+}
+
+.logo{
+font-size:12px;
+font-weight:700;
+letter-spacing:5px;
+
+color:#ff4fa0;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:4px;
+
+color:#777;
+}
+
+/* hero */
+
+.hero{
+padding:
+170px 7vw
+110px;
+}
+
+.hero-sub{
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#ff4fa0;
+
+margin-bottom:26px;
+}
+
+.hero-sub::before{
+content:"";
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#ff4fa0;
+
+box-shadow:
+0 0 18px rgba(255,79,160,0.45);
+}
+
+.hero-title{
+font-size:6vw;
+line-height:0.92;
+
+font-weight:200;
+
+letter-spacing:-0.3vw;
+
+margin-bottom:42px;
+}
+
+.hero-title span{
+color:#ff4fa0;
+}
+
+.hero-text{
+max-width:980px;
+
+font-size:18px;
+line-height:2.4;
+
+color:#5f5660;
+}
+
+/* section */
+
+.section{
+padding:
+90px 7vw;
+}
+
+.box{
+position:relative;
+
+background:
+rgba(255,255,255,0.76);
+
+backdrop-filter:blur(16px);
+
+border-radius:40px;
+
+padding:60px;
+
+margin-bottom:60px;
+
+border:
+1px solid rgba(255,182,216,0.24);
+
+box-shadow:
+0 25px 90px rgba(255,120,190,0.12);
+
+overflow:hidden;
+}
+
+.box::before{
+content:"";
+
+position:absolute;
+top:-120px;
+right:-120px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,180,220,0.22),
+transparent 70%
+);
+}
+
+.box h2{
+font-size:42px;
+line-height:1.15;
+font-weight:300;
+
+margin-bottom:30px;
+}
+
+.box p{
+font-size:17px;
+line-height:2.35;
+
+color:#615862;
+
+margin-bottom:24px;
+}
+
+.keyword-wrap{
+margin-top:34px;
+}
+
+.keyword{
+display:inline-block;
+
+padding:
+10px 18px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+90deg,
+#fff0f7,
+#fff8fb
+);
+
+border:
+1px solid rgba(255,182,216,0.25);
+
+font-size:12px;
+letter-spacing:2px;
+
+margin:
+0 10px 10px 0;
+
+color:#ff4fa0;
+}
+
+/* cta */
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+
+margin-top:38px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+20px 42px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+90deg,
+#ff5ba8,
+#ff8dc7
+);
+
+color:white;
+
+text-decoration:none;
+
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+
+box-shadow:
+0 15px 40px rgba(255,91,168,0.24);
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+}
+
+.cta.light{
+background:white;
+
+color:#ff4fa0;
+
+border:
+1px solid rgba(255,182,216,0.24);
+
+box-shadow:none;
+}
+
+/* footer */
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#999;
+}
+
+/* mobile */
+
+@media(max-width:920px){
+
+.hero-title{
+font-size:58px;
+letter-spacing:-2px;
+}
+
+.box{
+padding:34px 26px;
+}
+
+.box h2{
+font-size:34px;
+}
+
+.hero,
+.section{
+padding-left:24px;
+padding-right:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+<div class="glow"></div>
+<div class="glow2"></div>
+
+<header class="header">
+
+<div class="logo">
+CALMIA SKIN AESTHETIC
+</div>
+
+<div class="menu">
+MEDICAL BEAUTY GUIDE
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-sub">
+ADVANCED MEDICAL BEAUTY
+</div>
+
+<h1 class="hero-title">
+MODERN<br>
+<span>SKIN</span><br>
+CARE
+</h1>
+
+<p class="hero-text">
+美容医療は、
+“特別な人だけのもの”
+ではなく、
+もっと身近な美容習慣へと変化しています。
+
+最近では、
+価格だけではなく、
+安心感・清潔感・空間・カウンセリング対応など、
+総合的な満足感を重視する女性が増えています。
+
+特に医療脱毛では、
+自己処理による肌負担や、
+毎日のストレス軽減を目的に、
+幅広い年代の女性から注目を集めています。
+
+また、
+最近では、
+美容意識の高まりによって、
+“美容医療をもっと自然に取り入れたい”
+と考える女性も増えています。
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="box">
+
+<h2>
+なぜ今、
+医療脱毛を選ぶ女性が
+増えているの？
+</h2>
+
+<p>
+以前までは、
+脱毛といえばエステサロンをイメージする方も多く、
+「美容医療は少しハードルが高い」
+と感じる女性も少なくありませんでした。
+</p>
+
+<p>
+しかし近年では、
+美容医療がより身近な存在になり、
+医療脱毛を選択肢として検討する女性が急増しています。
+
+特に、
+20代〜40代を中心に、
+“毎日の自己処理負担を減らしたい”
+“肌をもっときれいに見せたい”
+“長期的な美容ケアとして取り入れたい”
+という考え方が広がっています。
+</p>
+
+<p>
+また最近では、
+SNSや美容メディアなどでも、
+医療脱毛や美容皮膚科に関する情報を目にする機会が増えており、
+美容医療に対するイメージも大きく変化しています。
+</p>
+
+<p>
+以前は、
+「特別な人だけが通う場所」
+という印象を持つ方もいましたが、
+現在では、
+美容室やネイルサロンのように、
+定期的な美容メンテナンスの一つとして、
+美容医療を取り入れる女性も増えています。
+</p>
+
+<p>
+特に、
+女性専用空間や、
+プライバシーに配慮した院内設計、
+相談しやすいカウンセリング体制など、
+“安心感”
+を重視したクリニック選びが注目されています。
+</p>
+
+<p>
+また、
+ホテルラウンジのような高級感ある空間設計や、
+落ち着いた照明、
+静かな待合スペースを取り入れる美容クリニックも増えており、
+美容体験そのものを快適にする流れも広がっています。
+</p>
+
+<div class="keyword-wrap">
+
+<div class="keyword">女性専用クリニック</div>
+<div class="keyword">医療脱毛</div>
+<div class="keyword">美容皮膚科</div>
+<div class="keyword">美肌ケア</div>
+<div class="keyword">美容医療</div>
+<div class="keyword">美容クリニック</div>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+FREE COUNSELING
+
+</a>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h2>
+自己処理による
+肌負担を気にする女性も
+増えています
+</h2>
+
+<p>
+毎日の自己処理は、
+多くの女性にとって当たり前の美容習慣になっています。
+
+しかし、
+カミソリや毛抜きによる処理を繰り返すことで、
+肌への負担につながるケースも少なくありません。
+</p>
+
+<p>
+乾燥、
+赤み、
+毛穴の目立ち、
+肌荒れ、
+埋没毛など、
+自己処理に悩みを感じている女性も増えています。
+</p>
+
+<p>
+そのため最近では、
+“ムダ毛ケア”
+だけを目的とするのではなく、
+肌をもっときれいに見せるための美容習慣として、
+医療脱毛を検討する女性も増えています。
+</p>
+
+<p>
+また、
+自己処理回数を減らしたい、
+忙しい朝の準備を少しでも短縮したい、
+肌への負担を減らしたい、
+という理由から、
+長期的な視点で医療脱毛を考える人も増えています。
+</p>
+
+<p>
+特に最近では、
+美容意識の高まりによって、
+“肌そのものを美しく見せたい”
+というニーズも強まっています。
+
+毛穴の目立ちや、
+自己処理によるくすみ感などを気にする女性も多く、
+スキンケア感覚で美容医療を取り入れるケースも増えています。
+</p>
+
+<p>
+美容医療は、
+単なる脱毛だけではなく、
+毎日の美容習慣を見直すきっかけとしても、
+注目を集めています。
+</p>
+
+<div class="keyword-wrap">
+
+<div class="keyword">肌負担軽減</div>
+<div class="keyword">敏感肌</div>
+<div class="keyword">美容習慣</div>
+<div class="keyword">自己処理対策</div>
+<div class="keyword">毛穴ケア</div>
+<div class="keyword">スキンケア</div>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW DETAIL
+
+</a>
+
+<a class="cta light"
+href="index.html">
+
+BACK TO TOP
+
+</a>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h2>
+安心感を重視した
+美容クリニック選びへ
+</h2>
+
+<p>
+美容医療を受ける際、
+施術内容だけではなく、
+“どんな空間で”
+“どんな人が対応してくれるか”
+を重視する女性も増えています。
+</p>
+
+<p>
+特に初めて医療脱毛を受ける場合、
+「痛みは大丈夫？」
+「相談しやすい？」
+「無理な勧誘はない？」
+など、
+不安を感じる女性も少なくありません。
+</p>
+
+<p>
+そのため最近では、
+安心感のあるカウンセリング対応や、
+女性専用空間、
+清潔感のある院内デザインなどが、
+クリニック選びの重要なポイントになっています。
+</p>
+
+<p>
+また、
+医療脱毛は複数回通うケースも多いため、
+“通いやすさ”
+も重視されています。
+
+駅から近い立地、
+予約の取りやすさ、
+落ち着いた空間、
+丁寧な接客など、
+総合的な快適さを求める女性も増えています。
+</p>
+
+<p>
+さらに最近では、
+美容クリニックそのものを、
+“自分を整える場所”
+として捉える人も増えています。
+
+忙しい毎日の中で、
+少し気分をリセットできるような、
+静かな空間や、
+リラックスできる環境を求める傾向も広がっています。
+</p>
+
+<p>
+ホテルラウンジのような待合スペースや、
+上質なインテリア、
+やわらかな照明などを取り入れる美容クリニックも増えており、
+美容医療のイメージも大きく変化しています。
+</p>
+
+<div class="keyword-wrap">
+
+<div class="keyword">安心感</div>
+<div class="keyword">美容カウンセリング</div>
+<div class="keyword">女性スタッフ</div>
+<div class="keyword">美容相談</div>
+<div class="keyword">女性向け美容</div>
+<div class="keyword">ラグジュアリー空間</div>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK CLINIC
+
+</a>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h2>
+美容医療を、
+もっと自然な美容習慣へ
+</h2>
+
+<p>
+美容医療は、
+“特別なイベント”
+のためだけではなく、
+日常の美容習慣として取り入れる時代へ変化しています。
+</p>
+
+<p>
+以前よりも、
+美容意識の高まりや、
+情報収集のしやすさによって、
+医療脱毛や美容皮膚科を身近に感じる女性も増えています。
+</p>
+
+<p>
+また、
+SNSや美容系メディアなどでも、
+美容クリニックに関する情報を見る機会が増え、
+「もっと気軽に相談してみたい」
+と考える女性も増加しています。
+</p>
+
+<p>
+特に最近では、
+“ナチュラルに美しく見せたい”
+という考え方が広がっており、
+過度な美容ではなく、
+清潔感や肌印象を整えるために美容医療を取り入れるケースも増えています。
+</p>
+
+<p>
+毎日の自己処理負担を減らしたい、
+もっと自分に自信を持ちたい、
+肌をきれいに見せたい。
+
+そんな女性たちから、
+医療脱毛や美容クリニックへの関心は、
+今ますます高まっています。
+</p>
+
+<p>
+美容医療を、
+もっと安心して、
+もっと自然に。
+
+女性が自分らしく美容と向き合える時代へ、
+医療美容は進化し続けています。
+</p>
+
+<div class="keyword-wrap">
+
+<div class="keyword">医療美容</div>
+<div class="keyword">美容習慣</div>
+<div class="keyword">女性向けクリニック</div>
+<div class="keyword">美肌ケア</div>
+<div class="keyword">スキンケア習慣</div>
+<div class="keyword">美容情報</div>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL SITE
+
+</a>
+
+<a class="cta light"
+href="index.html">
+
+TOP PAGE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+CALMIA SKIN AESTHETIC
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
