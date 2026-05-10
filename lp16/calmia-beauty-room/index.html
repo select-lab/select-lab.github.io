@@ -1,1 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CALMIA SKIN AESTHETIC</title>
+
+<meta name="description" content="女性専用医療脱毛・美肌クリニック特集。上質な空間と先進美容医療で、安心感のある美肌ケア体験を。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#fff7fb 0%,
+#fff 35%,
+#fdf9ff 100%
+);
+
+color:#352d34;
+
+overflow-x:hidden;
+
+line-height:1.9;
+}
+
+/* background */
+
+.bg-grid{
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+rgba(255,182,216,0.08) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(255,182,216,0.08) 1px,
+transparent 1px
+);
+
+background-size:42px 42px;
+
+z-index:-30;
+}
+
+.glow{
+position:fixed;
+width:700px;
+height:700px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,160,210,0.18),
+transparent 70%
+);
+
+top:-200px;
+right:-120px;
+
+z-index:-20;
+}
+
+.glow2{
+position:fixed;
+width:600px;
+height:600px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,210,235,0.16),
+transparent 70%
+);
+
+bottom:-180px;
+left:-100px;
+
+z-index:-20;
+}
+
+/* header */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:24px 42px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+
+background:
+rgba(255,255,255,0.78);
+
+backdrop-filter:blur(16px);
+
+border-bottom:
+1px solid rgba(255,182,216,0.22);
+}
+
+.logo{
+font-size:12px;
+font-weight:700;
+letter-spacing:5px;
+
+color:#ff4fa0;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:4px;
+
+color:#777;
+}
+
+/* hero */
+
+.hero{
+padding:
+180px 7vw
+130px;
+
+display:grid;
+grid-template-columns:
+1.1fr 0.9fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.hero-sub{
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#ff4fa0;
+
+margin-bottom:26px;
+}
+
+.hero-sub::before{
+content:"";
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#ff4fa0;
+
+box-shadow:
+0 0 18px rgba(255,79,160,0.5);
+}
+
+.hero-title{
+font-size:7vw;
+line-height:0.9;
+
+font-weight:200;
+
+letter-spacing:-0.4vw;
+
+margin-bottom:42px;
+}
+
+.hero-title span{
+color:#ff4fa0;
+}
+
+.hero-text{
+font-size:18px;
+line-height:2.3;
+
+max-width:640px;
+
+color:#625961;
+
+margin-bottom:50px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+20px 42px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+90deg,
+#ff5ba8,
+#ff8cc5
+);
+
+color:white;
+
+text-decoration:none;
+
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+
+box-shadow:
+0 15px 40px rgba(255,91,168,0.24);
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-4px);
+}
+
+.cta.light{
+background:white;
+
+color:#ff4fa0;
+
+border:
+1px solid rgba(255,79,160,0.22);
+
+box-shadow:none;
+}
+
+/* medical card */
+
+.medical-card{
+position:relative;
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,0.95),
+rgba(255,246,251,0.92)
+);
+
+padding:36px;
+
+border-radius:38px;
+
+border:
+1px solid rgba(255,182,216,0.3);
+
+overflow:hidden;
+
+box-shadow:
+0 25px 90px rgba(255,120,190,0.14);
+}
+
+.medical-card::before{
+content:"";
+
+position:absolute;
+top:-80px;
+right:-80px;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,170,220,0.25),
+transparent 70%
+);
+}
+
+.medical-card img{
+width:100%;
+
+display:block;
+
+border-radius:24px;
+
+margin-bottom:24px;
+}
+
+.medical-icons{
+display:flex;
+gap:14px;
+
+margin-bottom:24px;
+}
+
+.icon{
+flex:1;
+
+padding:18px 10px;
+
+background:white;
+
+border-radius:18px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:2px;
+
+color:#777;
+
+border:
+1px solid rgba(255,182,216,0.22);
+}
+
+.medical-card h3{
+font-size:34px;
+line-height:1.15;
+font-weight:300;
+
+margin-bottom:18px;
+}
+
+.medical-card p{
+font-size:16px;
+line-height:2.1;
+
+color:#666;
+}
+
+/* sections */
+
+.section{
+padding:
+120px 7vw;
+}
+
+.section-top{
+display:flex;
+justify-content:space-between;
+gap:50px;
+align-items:end;
+
+margin-bottom:60px;
+}
+
+.label{
+font-size:12px;
+letter-spacing:5px;
+font-weight:700;
+
+color:#ff4fa0;
+
+margin-bottom:20px;
+}
+
+.title{
+font-size:5vw;
+line-height:0.95;
+
+font-weight:200;
+
+letter-spacing:-0.25vw;
+}
+
+.text{
+max-width:720px;
+
+font-size:18px;
+line-height:2.3;
+
+color:#5f5660;
+}
+
+/* floating cards */
+
+.grid{
+display:grid;
+grid-template-columns:
+1fr 1fr;
+
+gap:34px;
+}
+
+.glass{
+position:relative;
+
+background:
+rgba(255,255,255,0.72);
+
+backdrop-filter:blur(16px);
+
+border-radius:34px;
+
+overflow:hidden;
+
+border:
+1px solid rgba(255,182,216,0.25);
+
+box-shadow:
+0 18px 70px rgba(255,120,190,0.12);
+}
+
+.glass img{
+width:100%;
+display:block;
+}
+
+.glass-content{
+padding:34px;
+}
+
+.glass-content h3{
+font-size:30px;
+font-weight:300;
+
+margin-bottom:16px;
+}
+
+.glass-content p{
+font-size:16px;
+line-height:2.1;
+
+color:#666;
+
+margin-bottom:26px;
+}
+
+/* wide */
+
+.future-box{
+margin-top:80px;
+
+position:relative;
+
+background:
+linear-gradient(
+135deg,
+#fff,
+#fff6fb
+);
+
+border-radius:42px;
+
+overflow:hidden;
+
+border:
+1px solid rgba(255,182,216,0.25);
+
+box-shadow:
+0 25px 100px rgba(255,120,190,0.16);
+}
+
+.future-box img{
+width:100%;
+display:block;
+}
+
+.future-content{
+padding:60px;
+}
+
+.future-content h3{
+font-size:46px;
+line-height:1.05;
+font-weight:200;
+
+margin-bottom:24px;
+}
+
+.future-content p{
+font-size:17px;
+line-height:2.2;
+
+color:#666;
+
+margin-bottom:34px;
+}
+
+/* final */
+
+.final{
+padding:
+150px 7vw;
+
+text-align:center;
+}
+
+.final-title{
+font-size:6vw;
+line-height:0.9;
+
+font-weight:200;
+
+letter-spacing:-0.3vw;
+
+margin-bottom:34px;
+}
+
+.final-title span{
+color:#ff4fa0;
+}
+
+.final-text{
+max-width:760px;
+margin:auto;
+
+font-size:18px;
+line-height:2.2;
+
+color:#666;
+
+margin-bottom:50px;
+}
+
+.next-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+22px 54px;
+
+border-radius:999px;
+
+background:white;
+
+border:
+1px solid rgba(255,182,216,0.3);
+
+color:#ff4fa0;
+
+text-decoration:none;
+
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+
+margin-top:26px;
+}
+
+/* footer */
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#999;
+}
+
+/* mobile */
+
+@media(max-width:920px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:68px;
+letter-spacing:-3px;
+}
+
+.title{
+font-size:52px;
+letter-spacing:-2px;
+}
+
+.final-title{
+font-size:56px;
+letter-spacing:-2px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero,
+.section,
+.final{
+padding-left:24px;
+padding-right:24px;
+}
+
+.section-top{
+display:block;
+}
+
+.medical-card,
+.future-content,
+.glass-content{
+padding:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+<div class="glow"></div>
+<div class="glow2"></div>
+
+<header class="header">
+
+<div class="logo">
+CALMIA SKIN AESTHETIC
+</div>
+
+<div class="menu">
+MEDICAL BEAUTY CLINIC
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<div class="hero-sub">
+ADVANCED MEDICAL BEAUTY
+</div>
+
+<h1 class="hero-title">
+PURE<br>
+<span>SKIN</span><br>
+CARE
+</h1>
+
+<p class="hero-text">
+美容医療を、
+もっと安心できるものへ。
+
+女性専用だからこそ感じられる安心感、
+落ち着いた空間、
+そして丁寧なカウンセリング。
+
+ただ施術を受けるだけではない、
+“自分を整える時間”
+として選ばれる
+新しい医療美容体験へ。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+FREE COUNSELING
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+NEXT PAGE
+
+</a>
+
+</div>
+
+</div>
+
+<div class="medical-card">
+
+<!-- image1.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image1.jpg.png"
+alt="">
+
+</a>
+
+<div class="medical-icons">
+
+<div class="icon">
+WOMEN ONLY
+</div>
+
+<div class="icon">
+MEDICAL CARE
+</div>
+
+<div class="icon">
+SKIN BEAUTY
+</div>
+
+</div>
+
+<h3>
+Modern<br>
+Skin Clinic
+</h3>
+
+<p>
+先進的な医療美容と、
+リラックスできる空間設計。
+
+女性が安心して通える
+プライベートクリニック体験を。
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-top">
+
+<div>
+
+<div class="label">
+MEDICAL HAIR REMOVAL
+</div>
+
+<h2 class="title">
+BEAUTY<br>
+WITH<br>
+COMFORT
+</h2>
+
+</div>
+
+<p class="text">
+最近では、
+ただ価格だけではなく、
+“どんな場所で”
+“どんな対応を受けるか”
+を重視する女性も増えています。
+
+安心感・空間・清潔感・相談しやすさ。
+
+医療脱毛は、
+より快適な美容体験へ進化しています。
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="glass">
+
+<!-- image2.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="">
+
+</a>
+
+<div class="glass-content">
+
+<h3>
+Private<br>
+Counseling
+</h3>
+
+<p>
+一人ひとりに合わせた、
+丁寧なカウンセリング。
+
+初めて美容医療を受ける方でも、
+安心して相談しやすい環境づくりが大切にされています。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW DETAIL
+
+</a>
+
+</div>
+
+</div>
+
+<div class="glass">
+
+<!-- image3.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image3.jpg.png"
+alt="">
+
+</a>
+
+<div class="glass-content">
+
+<h3>
+Sensitive<br>
+Skin Care
+</h3>
+
+<p>
+施術だけではなく、
+肌へのやさしさや、
+アフターケアを重視する女性も増えています。
+
+美容と安心感を両立した、
+新しい医療美容へ。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK MORE
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="future-box">
+
+<!-- image4.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image4.jpg.png"
+alt="">
+
+</a>
+
+<div class="future-content">
+
+<h3>
+Future Medical<br>
+Beauty Experience
+</h3>
+
+<p>
+ホテルラウンジのような空間で、
+落ち着きながら美容医療を受けられる環境へ。
+
+忙しい毎日の中で、
+自分自身を整えるための、
+特別な美容時間を。
+</p>
+
+<p>
+安心感と先進美容を融合した、
+次世代型スキンクリニック体験へ。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL SITE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-top">
+
+<div>
+
+<div class="label">
+ADVANCED BEAUTY CLINIC
+</div>
+
+<h2 class="title">
+CONFIDENCE<br>
+STARTS<br>
+HERE
+</h2>
+
+</div>
+
+<p class="text">
+ムダ毛ケアだけではなく、
+毎日の自己処理による肌負担や、
+ストレス軽減を目的に、
+医療脱毛を選ぶ女性も増えています。
+
+“自分らしく過ごせる”
+美容習慣として、
+医療美容はより身近な存在になっています。
+</p>
+
+</div>
+
+<div class="future-box">
+
+<!-- image5.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image5.jpg.png"
+alt="">
+
+</a>
+
+<div class="future-content">
+
+<h3>
+Elegant Skin<br>
+Treatment
+</h3>
+
+<p>
+女性専用だからこそ感じられる、
+安心感と落ち着き。
+
+美容医療を、
+もっと自然に、
+もっと心地よく。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+BOOK NOW
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+GO TO PAGE 2
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2 class="final-title">
+ADVANCED<br>
+<span>SKIN</span><br>
+CLINIC
+</h2>
+
+<p class="final-text">
+女性がもっと安心して、
+もっと自分らしく美容医療と向き合えるように。
+
+美しさと安心感を大切にした、
+新しい医療美容体験へ。
+</p>
+
+<div class="cta-wrap"
+style="justify-content:center;">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL CLINIC
+
+</a>
+
+</div>
+
+<a class="next-link"
+href="page2.html">
+
+NEXT CONTENT →
+
+</a>
+
+</section>
+
+<footer class="footer">
+
+CALMIA SKIN AESTHETIC
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
