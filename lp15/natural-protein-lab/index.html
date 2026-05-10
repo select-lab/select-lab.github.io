@@ -1,1 +1,839 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NATURAL PROTEIN LAB</title>
+
+<meta name="description" content="ナチュラル志向の女性向けプロテイン・ウェルネス習慣・毎日続けやすいライフスタイル提案LP。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:#f7f5f0;
+
+color:#2d2d2d;
+
+overflow-x:hidden;
+line-height:1.8;
+}
+
+/* BACKGROUND */
+
+.bg-grad{
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at top left,
+rgba(204,230,210,0.45),
+transparent 35%),
+
+radial-gradient(circle at bottom right,
+rgba(232,215,191,0.45),
+transparent 35%);
+
+z-index:-20;
+}
+
+/* HEADER */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:28px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+
+backdrop-filter:blur(12px);
+
+background:
+rgba(247,245,240,0.72);
+
+border-bottom:
+1px solid rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:13px;
+font-weight:700;
+letter-spacing:5px;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:4px;
+opacity:0.7;
+}
+
+/* HERO */
+
+.hero{
+padding:
+170px 7vw
+120px;
+
+display:grid;
+grid-template-columns:
+1.1fr 0.9fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.hero-sub{
+font-size:12px;
+letter-spacing:5px;
+font-weight:700;
+
+color:#6f8f78;
+
+margin-bottom:30px;
+}
+
+.hero-title{
+font-size:7vw;
+line-height:0.95;
+letter-spacing:-0.35vw;
+font-weight:200;
+
+margin-bottom:40px;
+}
+
+.hero-text{
+max-width:620px;
+
+font-size:18px;
+line-height:2.3;
+
+color:#5c5c5c;
+
+margin-bottom:50px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+20px 42px;
+
+border-radius:999px;
+
+background:#2d4532;
+
+color:white;
+
+text-decoration:none;
+
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-3px);
+}
+
+.cta.light{
+background:white;
+color:#2d4532;
+
+border:
+1px solid rgba(0,0,0,0.08);
+}
+
+/* HERO CARD */
+
+.hero-card{
+background:white;
+
+padding:42px;
+
+border-radius:38px;
+
+box-shadow:
+0 25px 80px rgba(0,0,0,0.08);
+}
+
+.hero-card img{
+width:100%;
+border-radius:24px;
+display:block;
+
+margin-bottom:28px;
+}
+
+.hero-card h3{
+font-size:34px;
+font-weight:300;
+line-height:1.25;
+
+margin-bottom:18px;
+}
+
+.hero-card p{
+font-size:16px;
+line-height:2.1;
+
+color:#666;
+}
+
+/* SECTION */
+
+.section{
+padding:
+120px 7vw;
+}
+
+.label{
+font-size:12px;
+letter-spacing:5px;
+font-weight:700;
+
+color:#6f8f78;
+
+margin-bottom:22px;
+}
+
+.title{
+font-size:5vw;
+line-height:1;
+font-weight:200;
+letter-spacing:-0.25vw;
+
+margin-bottom:36px;
+}
+
+.text{
+max-width:760px;
+
+font-size:18px;
+line-height:2.3;
+
+color:#5c5c5c;
+}
+
+/* IMAGE GRID */
+
+.grid{
+margin-top:70px;
+
+display:grid;
+grid-template-columns:
+1fr 1fr;
+
+gap:34px;
+}
+
+.card{
+background:white;
+
+border-radius:34px;
+
+overflow:hidden;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.08);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card-content{
+padding:34px;
+}
+
+.card-content h3{
+font-size:30px;
+font-weight:300;
+
+margin-bottom:16px;
+}
+
+.card-content p{
+font-size:16px;
+line-height:2;
+
+color:#666;
+
+margin-bottom:26px;
+}
+
+/* WIDE SECTION */
+
+.wide{
+margin-top:80px;
+
+background:white;
+
+border-radius:40px;
+
+overflow:hidden;
+
+box-shadow:
+0 25px 80px rgba(0,0,0,0.08);
+}
+
+.wide img{
+width:100%;
+display:block;
+}
+
+.wide-content{
+padding:60px;
+}
+
+.wide-content h3{
+font-size:44px;
+font-weight:200;
+line-height:1.1;
+
+margin-bottom:24px;
+}
+
+.wide-content p{
+font-size:17px;
+line-height:2.2;
+
+color:#666;
+
+margin-bottom:34px;
+}
+
+/* SOFT SECTION */
+
+.soft{
+background:
+linear-gradient(
+180deg,
+#f3efe7 0%,
+#f7f5f0 100%
+);
+}
+
+/* FINAL */
+
+.final{
+padding:
+150px 7vw;
+
+text-align:center;
+}
+
+.final-title{
+font-size:6vw;
+line-height:0.95;
+font-weight:200;
+letter-spacing:-0.3vw;
+
+margin-bottom:34px;
+}
+
+.final-text{
+max-width:760px;
+margin:auto;
+
+font-size:18px;
+line-height:2.2;
+
+color:#666;
+
+margin-bottom:50px;
+}
+
+/* NEXT PAGE */
+
+.next-page{
+margin-top:40px;
+}
+
+.next-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+22px 50px;
+
+border-radius:999px;
+
+background:#dbe7dc;
+
+color:#2d4532;
+
+text-decoration:none;
+
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.next-link:hover{
+transform:scale(1.04);
+}
+
+/* FOOTER */
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:920px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:68px;
+letter-spacing:-3px;
+}
+
+.title{
+font-size:52px;
+letter-spacing:-2px;
+}
+
+.final-title{
+font-size:54px;
+letter-spacing:-2px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.section,
+.hero,
+.final{
+padding-left:24px;
+padding-right:24px;
+}
+
+.hero-card,
+.card-content,
+.wide-content{
+padding:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-grad"></div>
+
+<header class="header">
+
+<div class="logo">
+NATURAL PROTEIN LAB
+</div>
+
+<div class="menu">
+WELLNESS LIFE
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<div class="hero-sub">
+DAILY WELLNESS ROUTINE
+</div>
+
+<h1 class="hero-title">
+CLEAN<br>
+BODY<br>
+CARE
+</h1>
+
+<p class="hero-text">
+毎日の健康習慣を、
+もっと自然に、もっと心地よく。
+
+“頑張るため”ではなく、
+“整えるため”のウェルネス習慣へ。
+</p>
+
+<div class="cta-wrap">
+
+<!-- ▼ ここにアフィリエイトリンクを入れる ▼ -->
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+SHOP NOW
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+NEXT PAGE
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<!-- ▼ image1.jpg.png ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image1.jpg.png"
+alt="">
+
+</a>
+
+<h3>
+Morning<br>
+Wellness
+</h3>
+
+<p>
+朝の一杯から始まる、
+新しいウェルネス習慣。
+
+毎日続けたくなる、
+ナチュラルなライフスタイルを。
+</p>
+
+</div>
+
+</section>
+
+<section class="section soft">
+
+<div class="label">
+NATURAL DAILY CARE
+</div>
+
+<h2 class="title">
+BEAUTY<br>
+FROM<br>
+INSIDE
+</h2>
+
+<p class="text">
+美容やボディメイクだけではなく、
+毎日の食生活を整える選択肢として、
+プロテインを取り入れる女性が増えています。
+
+“無理をする”のではなく、
+心地よく続けるためのインナーケアへ。
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<!-- ▼ image2.jpg.png ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="">
+
+</a>
+
+<div class="card-content">
+
+<h3>
+Natural<br>
+Protein
+</h3>
+
+<p>
+毎日飲み続けるものだからこそ、
+やさしい飲み心地や続けやすさを重視する人も増えています。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW ITEM
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<!-- ▼ image3.jpg.png ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image3.jpg.png"
+alt="">
+
+</a>
+
+<div class="card-content">
+
+<h3>
+Cafe Style<br>
+Routine
+</h3>
+
+<p>
+“プロテインっぽくない”
+おしゃれなウェルネス習慣が、
+今注目されています。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK MORE
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="wide">
+
+<!-- ▼ image4.jpg.png ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image4.jpg.png"
+alt="">
+
+</a>
+
+<div class="wide-content">
+
+<h3>
+Simple Wellness,<br>
+Every Day.
+</h3>
+
+<p>
+忙しい毎日でも、
+自分のコンディションを整える時間を大切に。
+
+ナチュラルで、
+無理なく続けられるライフスタイルへ。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="label">
+BODY MAKE & WELLNESS
+</div>
+
+<h2 class="title">
+YOUR<br>
+NEW<br>
+ROUTINE
+</h2>
+
+<p class="text">
+日常に溶け込むような、
+やさしいウェルネス習慣。
+
+カラダを整えることを、
+もっと自由に、
+もっと楽しく。
+</p>
+
+<div class="wide">
+
+<!-- ▼ image5.jpg.png ▼ -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image5.jpg.png"
+alt="">
+
+</a>
+
+<div class="wide-content">
+
+<h3>
+Healthy Habit<br>
+For Everyday
+</h3>
+
+<p>
+置き換え・美容・ボディメイク・栄養補給など、
+幅広いライフスタイルに取り入れられている
+ウェルネスプロテイン。
+
+毎日の新しい習慣として、
+取り入れる人が増えています。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW PRODUCT
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+GO TO PAGE 2
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2 class="final-title">
+WELLNESS<br>
+FOR LIFE
+</h2>
+
+<p class="final-text">
+毎日の積み重ねを、
+もっと自然に。
+
+ナチュラルに整える、
+新しいウェルネス習慣へ。
+</p>
+
+<div class="cta-wrap"
+style="justify-content:center;">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL SITE
+
+</a>
+
+<div class="next-page">
+
+<a class="next-link"
+href="page2.html">
+
+NEXT CONTENT →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+NATURAL PROTEIN LAB
+
+</footer>
+
+<!-- ▼ A8計測img ▼ -->
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
