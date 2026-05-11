@@ -1,1 +1,989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Morning Booster | 朝時間と集中習慣</title>
+
+<meta name="description" content="Morning Booster特集。朝活・集中・静かな朝時間・コーヒーブレイクをテーマにしたライフスタイルメディア。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:
+"Hiragino Sans",
+"Yu Gothic",
+sans-serif;
+
+background:
+#efe7dc;
+
+color:#2c241d;
+
+line-height:2.1;
+
+overflow-x:hidden;
+}
+
+/* 紙背景 */
+
+body::before{
+
+content:"";
+
+position:fixed;
+inset:0;
+
+background-image:
+url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+
+opacity:0.18;
+
+pointer-events:none;
+
+z-index:-20;
+}
+
+/* 朝日 */
+
+.sunlight{
+
+position:fixed;
+top:-200px;
+right:-200px;
+
+width:700px;
+height:700px;
+
+background:
+radial-gradient(circle,
+rgba(255,241,210,0.95),
+transparent 70%);
+
+z-index:-15;
+}
+
+/* カフェライン */
+
+.coffee-ring{
+
+position:fixed;
+
+bottom:40px;
+left:40px;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+border:
+10px solid rgba(120,70,40,0.08);
+
+z-index:-10;
+}
+
+/* header */
+
+.header{
+
+padding:
+34px 7vw;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+
+font-size:15px;
+
+letter-spacing:6px;
+
+font-weight:700;
+
+color:#352b23;
+}
+
+.menu{
+
+font-size:11px;
+
+letter-spacing:4px;
+
+color:#8a7765;
+}
+
+/* hero */
+
+.hero{
+
+padding:
+20px 7vw
+120px;
+}
+
+.hero-card{
+
+background:
+rgba(255,250,242,0.82);
+
+border:
+1px solid rgba(70,40,20,0.08);
+
+border-radius:38px;
+
+padding:80px;
+
+box-shadow:
+0 20px 60px rgba(60,40,20,0.08);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.hero-card::before{
+
+content:"";
+
+position:absolute;
+top:-80px;
+left:-80px;
+
+width:220px;
+height:220px;
+
+background:
+rgba(255,240,220,0.6);
+
+border-radius:50%;
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:
+1.1fr 0.9fr;
+
+gap:80px;
+
+align-items:center;
+}
+
+.label{
+
+display:inline-block;
+
+padding:
+10px 18px;
+
+background:
+#f7efe5;
+
+border:
+1px solid rgba(0,0,0,0.08);
+
+border-radius:999px;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+margin-bottom:34px;
+
+color:#7a6653;
+}
+
+.hero h1{
+
+font-size:6.8vw;
+
+line-height:1.04;
+
+font-weight:300;
+
+letter-spacing:-0.35vw;
+
+margin-bottom:42px;
+
+color:#2d231c;
+}
+
+.hero p{
+
+font-size:17px;
+
+line-height:2.4;
+
+color:#5f5349;
+
+margin-bottom:42px;
+}
+
+.button-wrap{
+
+display:flex;
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+18px 34px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.btn.main{
+
+background:
+#2f241c;
+
+color:white;
+}
+
+.btn.main:hover{
+
+transform:translateY(-4px);
+}
+
+.btn.sub{
+
+background:
+rgba(255,255,255,0.8);
+
+border:
+1px solid rgba(0,0,0,0.08);
+
+color:#584a3d;
+}
+
+.hero-image img{
+
+width:100%;
+
+display:block;
+
+border-radius:30px;
+
+transform:rotate(-2deg);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,0.10);
+}
+
+/* section */
+
+.section{
+
+padding:
+0 7vw
+110px;
+}
+
+.paper{
+
+background:
+rgba(255,251,246,0.84);
+
+border-radius:34px;
+
+padding:70px;
+
+border:
+1px solid rgba(0,0,0,0.07);
+
+box-shadow:
+0 16px 40px rgba(0,0,0,0.05);
+
+margin-bottom:70px;
+
+position:relative;
+}
+
+.paper::after{
+
+content:"";
+
+position:absolute;
+
+top:18px;
+right:24px;
+
+width:70px;
+height:4px;
+
+background:
+rgba(160,120,90,0.18);
+
+border-radius:999px;
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+0.9fr 1.1fr;
+
+gap:60px;
+
+align-items:center;
+}
+
+.grid.reverse .text{
+order:2;
+}
+
+.grid.reverse .image{
+order:1;
+}
+
+.image img{
+
+width:100%;
+
+display:block;
+
+border-radius:24px;
+}
+
+.text small{
+
+display:block;
+
+font-size:11px;
+
+letter-spacing:4px;
+
+margin-bottom:18px;
+
+color:#9a806c;
+}
+
+.text h2{
+
+font-size:52px;
+
+line-height:1.08;
+
+font-weight:300;
+
+margin-bottom:30px;
+
+letter-spacing:-0.18vw;
+
+color:#2d241d;
+}
+
+.text p{
+
+font-size:16px;
+
+line-height:2.35;
+
+color:#5c5046;
+
+margin-bottom:28px;
+}
+
+.note{
+
+padding:28px;
+
+background:
+#faf4ed;
+
+border-left:
+4px solid #8d6d56;
+
+border-radius:16px;
+
+margin:
+36px 0;
+}
+
+.note strong{
+
+display:block;
+
+margin-bottom:12px;
+
+font-size:15px;
+
+color:#3f3025;
+}
+
+/* bottom */
+
+.bottom{
+
+padding:
+0 7vw
+120px;
+}
+
+.bottom-card{
+
+padding:90px;
+
+border-radius:36px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,249,240,0.95),
+rgba(244,235,224,0.96)
+);
+
+border:
+1px solid rgba(0,0,0,0.07);
+
+text-align:center;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.05);
+}
+
+.bottom-card h3{
+
+font-size:5.8vw;
+
+line-height:1.06;
+
+font-weight:300;
+
+letter-spacing:-0.24vw;
+
+margin-bottom:34px;
+
+color:#2d231c;
+}
+
+.bottom-card p{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:17px;
+
+line-height:2.4;
+
+color:#5f5449;
+
+margin-bottom:44px;
+}
+
+.footer{
+
+padding:44px 20px;
+
+text-align:center;
+
+font-size:11px;
+
+letter-spacing:4px;
+
+color:#8a7867;
+}
+
+/* mobile */
+
+@media(max-width:920px){
+
+.hero-grid,
+.grid{
+
+grid-template-columns:1fr;
+
+display:block;
+}
+
+.hero h1{
+
+font-size:64px;
+
+letter-spacing:-3px;
+}
+
+.text h2{
+
+font-size:42px;
+}
+
+.bottom-card h3{
+
+font-size:52px;
+}
+
+.hero-card,
+.paper,
+.bottom-card{
+
+padding:28px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sunlight"></div>
+<div class="coffee-ring"></div>
+
+<header class="header">
+
+<div class="logo">
+MORNING BOOSTER
+</div>
+
+<div class="menu">
+朝時間メディア
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-card">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="label">
+静かな朝を整える習慣
+</div>
+
+<h1>
+朝の空気を、<br>
+もっと好きになる。
+</h1>
+
+<p>
+朝早く起きて、
+コーヒーを淹れて、
+静かな時間を過ごしたい。
+
+そう思っていても、
+実際にはスマホを見ながら時間が過ぎ、
+気づけば慌ただしく家を出る。
+
+そんな朝を、
+少しずつ変えていきたい人へ。
+
+Morning Boosterは、
+“気合い”
+ではなく、
+“朝時間を整える”
+という新しい習慣を提案します。
+
+コーヒーだけでは足りない。
+エナジードリンクだけに頼りたくない。
+
+そんな現代の朝活世代に向けて設計された、
+朝専用サプリメントです。
+</p>
+
+<div class="button-wrap">
+
+<a class="btn main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+公式サイトを見る
+
+</a>
+
+<a class="btn sub"
+href="page2.html">
+
+特集ページへ
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<!-- image1.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image1.jpg.png"
+alt="Morning Booster">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="paper">
+
+<div class="grid">
+
+<div class="image">
+
+<!-- image2.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="朝のコーヒー">
+
+</a>
+
+</div>
+
+<div class="text">
+
+<small>
+MORNING COFFEE STYLE
+</small>
+
+<h2>
+朝のコーヒー時間を、
+もっと心地よく。
+</h2>
+
+<p>
+最近では、
+ただ眠気を飛ばすためではなく、
+“朝の時間そのもの”
+を楽しむ人が増えています。
+
+静かな部屋、
+差し込む朝日、
+お気に入りのマグカップ。
+
+そんな空気の中で、
+自分を整える時間を持つ。
+
+Morning Boosterは、
+そんな朝時間に寄り添うために生まれました。
+</p>
+
+<p>
+カフェインだけではなく、
+朝の集中、
+やる気、
+持続力まで考えられた設計で、
+朝活や勉強、
+副業時間をサポートします。
+</p>
+
+<div class="note">
+
+<strong>
+朝時間を整えることは、
+1日を整えること。
+</strong>
+
+毎日の小さな習慣が、
+少しずつ生活リズムを変えていきます。
+
+</div>
+
+<a class="btn main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+Morning Booster
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="paper">
+
+<div class="grid reverse">
+
+<div class="text">
+
+<small>
+FOCUS & ROUTINE
+</small>
+
+<h2>
+“朝だけ頑張る”
+ではなく、
+続けやすい習慣へ。
+</h2>
+
+<p>
+朝活が続かない理由は、
+意志の弱さだけではありません。
+
+起きても頭が働かない。
+やる気が出ない。
+集中できない。
+
+そんな状態では、
+理想の朝習慣を続けるのは難しいものです。
+</p>
+
+<p>
+Morning Boosterは、
+朝のルーティンそのものを整えるために、
+複数の成分を組み合わせて設計されています。
+
+朝4時や5時の静かな時間に、
+読書、
+勉強、
+仕事、
+運動など、
+自分のための時間を作りたい人に人気です。
+</p>
+
+<div class="button-wrap">
+
+<a class="btn main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+詳細を見る
+
+</a>
+
+<a class="btn sub"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+公式ページ
+
+</a>
+
+</div>
+
+</div>
+
+<div class="image">
+
+<!-- image3.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image3.jpg.png"
+alt="集中時間">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="paper">
+
+<div class="grid">
+
+<div class="image">
+
+<!-- image4.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image4.jpg.png"
+alt="朝活">
+
+</a>
+
+</div>
+
+<div class="text">
+
+<small>
+LIFESTYLE CHANGE
+</small>
+
+<h2>
+静かな朝が、
+生活を変えていく。
+</h2>
+
+<p>
+朝の2時間は、
+1日の中でも特に集中しやすい時間だと言われています。
+
+周囲からの連絡も少なく、
+雑音も少ない。
+
+だからこそ、
+自分自身のために使いやすい時間です。
+</p>
+
+<p>
+Morning Boosterは、
+そんな朝時間を、
+もっと快適に、
+もっと自然に楽しみたい人のために作られました。
+</p>
+
+<p>
+コーヒーだけでは足りない。
+でも強すぎる刺激にも頼りたくない。
+
+そんな現代の朝活スタイルに、
+ちょうどいいバランスを目指しています。
+</p>
+
+<a class="btn main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+公式サイトはこちら
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bottom">
+
+<div class="bottom-card">
+
+<!-- image5.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image5.jpg.png"
+style="
+width:100%;
+display:block;
+border-radius:28px;
+margin-bottom:50px;
+"
+alt="Morning Booster">
+
+</a>
+
+<h3>
+朝の習慣が、<br>
+未来を変えていく。
+</h3>
+
+<p>
+毎朝の積み重ねは、
+少しずつ人生を変えていきます。
+
+静かな朝。
+落ち着いた空気。
+お気に入りのコーヒー。
+
+そして、
+自分を整えるための時間。
+
+Morning Boosterは、
+そんな朝時間をサポートする、
+新しい朝習慣のためのサプリメントです。
+</p>
+
+<div class="button-wrap"
+style="
+justify-content:center;
+">
+
+<a class="btn main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+公式サイトを見る
+
+</a>
+
+<a class="btn sub"
+href="page2.html">
+
+2ページ目へ
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+MORNING BOOSTER
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
