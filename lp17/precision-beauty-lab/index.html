@@ -1,1 +1,939 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PRECISION BEAUTY LAB</title>
+
+<meta name="description" content="細部まで美しさを整える、新時代のホームビューティー体験。ピンポイントケア発想の美容機器特集。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Inter",
+"Helvetica Neue",
+sans-serif;
+
+background:#f4f6f8;
+
+color:#1d232b;
+
+overflow-x:hidden;
+
+line-height:1.9;
+}
+
+/* unique layered background */
+
+.bg-noise{
+position:fixed;
+inset:0;
+
+background-image:
+radial-gradient(
+rgba(0,0,0,0.018) 1px,
+transparent 1px
+);
+
+background-size:14px 14px;
+
+opacity:0.6;
+
+z-index:-20;
+}
+
+.bg-lines{
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,0.03) 1px,
+transparent 1px
+);
+
+background-size:120px 120px;
+
+z-index:-19;
+}
+
+.bg-circle{
+position:fixed;
+
+top:-240px;
+right:-180px;
+
+width:680px;
+height:680px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(185,196,210,0.25),
+transparent 72%
+);
+
+filter:blur(20px);
+
+z-index:-18;
+}
+
+.bg-circle2{
+position:fixed;
+
+bottom:-240px;
+left:-180px;
+
+width:620px;
+height:620px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(210,220,228,0.22),
+transparent 72%
+);
+
+filter:blur(20px);
+
+z-index:-18;
+}
+
+/* header */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:24px 44px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:
+rgba(244,246,248,0.82);
+
+backdrop-filter:blur(12px);
+
+border-bottom:
+1px solid rgba(0,0,0,0.05);
+
+z-index:999;
+}
+
+.logo{
+font-size:12px;
+letter-spacing:5px;
+font-weight:700;
+
+color:#111;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:3px;
+
+color:#69717a;
+}
+
+/* hero */
+
+.hero{
+padding:
+170px 7vw
+120px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:
+1.05fr 0.95fr;
+
+gap:80px;
+
+align-items:center;
+}
+
+.hero-label{
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#7a8794;
+
+margin-bottom:26px;
+}
+
+.hero-title{
+font-size:7vw;
+line-height:0.88;
+
+font-weight:200;
+
+letter-spacing:-0.4vw;
+
+margin-bottom:42px;
+}
+
+.hero-title span{
+font-weight:600;
+}
+
+.hero-text{
+max-width:620px;
+
+font-size:18px;
+line-height:2.3;
+
+color:#59626d;
+
+margin-bottom:50px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+20px 44px;
+
+border-radius:18px;
+
+background:#111;
+
+color:white;
+
+text-decoration:none;
+
+font-size:12px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+
+border:
+1px solid #111;
+}
+
+.cta:hover{
+background:white;
+color:#111;
+}
+
+.cta.light{
+background:white;
+color:#111;
+
+border:
+1px solid rgba(0,0,0,0.08);
+}
+
+/* hero card */
+
+.hero-card{
+position:relative;
+
+background:white;
+
+border-radius:36px;
+
+padding:34px;
+
+border:
+1px solid rgba(0,0,0,0.06);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.06);
+}
+
+.hero-card::before{
+content:"";
+
+position:absolute;
+top:22px;
+right:22px;
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#111;
+}
+
+.hero-image{
+width:100%;
+display:block;
+
+border-radius:24px;
+
+margin-bottom:26px;
+}
+
+.hero-info{
+display:grid;
+grid-template-columns:
+1fr 1fr;
+gap:18px;
+}
+
+.info-box{
+padding:22px;
+
+border-radius:22px;
+
+background:#f6f7f9;
+
+border:
+1px solid rgba(0,0,0,0.04);
+}
+
+.info-title{
+font-size:11px;
+letter-spacing:3px;
+
+color:#7c858f;
+
+margin-bottom:12px;
+}
+
+.info-text{
+font-size:15px;
+line-height:1.9;
+
+color:#424a53;
+}
+
+/* section */
+
+.section{
+padding:
+110px 7vw;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+gap:60px;
+
+align-items:flex-end;
+
+margin-bottom:70px;
+}
+
+.section-label{
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#7b8591;
+
+margin-bottom:18px;
+}
+
+.section-title{
+font-size:5vw;
+line-height:0.9;
+
+font-weight:200;
+
+letter-spacing:-0.25vw;
+}
+
+.section-text{
+max-width:700px;
+
+font-size:17px;
+line-height:2.2;
+
+color:#5e6770;
+}
+
+/* cards */
+
+.grid{
+display:grid;
+grid-template-columns:
+1fr 1fr;
+
+gap:34px;
+}
+
+.card{
+background:white;
+
+border-radius:34px;
+
+overflow:hidden;
+
+border:
+1px solid rgba(0,0,0,0.06);
+
+box-shadow:
+0 24px 70px rgba(0,0,0,0.05);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card-content{
+padding:38px;
+}
+
+.card-content h3{
+font-size:34px;
+line-height:1.05;
+font-weight:300;
+
+margin-bottom:20px;
+}
+
+.card-content p{
+font-size:16px;
+line-height:2.1;
+
+color:#5f6770;
+
+margin-bottom:28px;
+}
+
+/* wide panel */
+
+.panel{
+margin-top:80px;
+
+background:
+linear-gradient(
+135deg,
+#ffffff,
+#eef2f5
+);
+
+border-radius:42px;
+
+padding:70px;
+
+border:
+1px solid rgba(0,0,0,0.05);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.panel::before{
+content:"";
+
+position:absolute;
+top:-120px;
+right:-120px;
+
+width:320px;
+height:320px;
+
+border-radius:50%;
+
+border:
+1px solid rgba(0,0,0,0.05);
+}
+
+.panel h3{
+font-size:58px;
+line-height:0.95;
+
+font-weight:200;
+
+letter-spacing:-0.2vw;
+
+margin-bottom:30px;
+}
+
+.panel p{
+max-width:760px;
+
+font-size:17px;
+line-height:2.2;
+
+color:#5e6770;
+
+margin-bottom:38px;
+}
+
+/* footer */
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#7d858d;
+}
+
+/* mobile */
+
+@media(max-width:920px){
+
+.hero-grid,
+.grid,
+.section-head{
+grid-template-columns:1fr;
+display:block;
+}
+
+.hero-title{
+font-size:68px;
+letter-spacing:-3px;
+}
+
+.section-title{
+font-size:54px;
+letter-spacing:-2px;
+margin-bottom:30px;
+}
+
+.hero,
+.section{
+padding-left:24px;
+padding-right:24px;
+}
+
+.hero-card,
+.card-content,
+.panel{
+padding:28px;
+}
+
+.panel h3{
+font-size:44px;
+}
+
+.hero-info{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-noise"></div>
+<div class="bg-lines"></div>
+<div class="bg-circle"></div>
+<div class="bg-circle2"></div>
+
+<header class="header">
+
+<div class="logo">
+PRECISION BEAUTY LAB
+</div>
+
+<div class="menu">
+HOME BEAUTY DEVICE
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="hero-label">
+PRECISION HOME CARE
+</div>
+
+<h1 class="hero-title">
+SMALL<br>
+DETAILS.<br>
+<span>BIG</span><br>
+CONFIDENCE.
+</h1>
+
+<p class="hero-text">
+これまで見落とされがちだった、
+細かな部分のセルフケアへ。
+
+顔まわりや細部まで、
+もっとスマートに、
+もっと自然に整えたい。
+
+“近距離の自信”
+を意識する新しいホームビューティー習慣が、
+今注目されています。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+NEXT PAGE
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<!-- image1.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img class="hero-image"
+src="image1.jpg.png"
+alt="">
+
+</a>
+
+<div class="hero-info">
+
+<div class="info-box">
+
+<div class="info-title">
+PRECISION CARE
+</div>
+
+<div class="info-text">
+細かな部位まで、
+よりスマートなセルフケア発想。
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-title">
+HOME BEAUTY
+</div>
+
+<div class="info-text">
+自宅で続けやすい、
+ミニマル美容習慣へ。
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+
+<div>
+
+<div class="section-label">
+SMART BEAUTY TOOL
+</div>
+
+<h2 class="section-title">
+PRECISION<br>
+SELF<br>
+CARE
+</h2>
+
+</div>
+
+<p class="section-text">
+最近では、
+ただ広範囲をケアするだけではなく、
+“細部まで自然に整える”
+という考え方も広がっています。
+
+細かな部分だからこそ、
+毎日の印象に差が生まれる。
+
+そんな新しいセルフケア意識が、
+美容感度の高い人たちから注目されています。
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<!-- image2.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="">
+
+</a>
+
+<div class="card-content">
+
+<h3>
+Close-Up<br>
+Beauty
+</h3>
+
+<p>
+オンライン会議、
+近距離での会話、
+写真撮影。
+
+細部の印象まで意識する人が、
+年々増えています。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW DETAIL
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<!-- image3.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image3.jpg.png"
+alt="">
+
+</a>
+
+<div class="card-content">
+
+<h3>
+Minimal<br>
+Beauty Tool
+</h3>
+
+<p>
+無駄を削ぎ落とした、
+シンプルな美容家電デザイン。
+
+毎日の生活空間にも、
+自然になじむ存在へ。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK MORE
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<!-- image4.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image4.jpg.png"
+style="
+width:100%;
+border-radius:28px;
+margin-bottom:40px;
+display:block;
+"
+alt="">
+
+</a>
+
+<h3>
+Future<br>
+Home Care
+</h3>
+
+<p>
+美容サロンだけではなく、
+自宅でのセルフケア品質を重視する時代へ。
+
+日々のルーティンの中で、
+もっと自然に、
+もっと快適に取り入れられる
+ホームビューティー習慣が広がっています。
+</p>
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL SITE
+
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+
+<div>
+
+<div class="section-label">
+NEXT GENERATION BEAUTY
+</div>
+
+<h2 class="section-title">
+DETAILS<br>
+CREATE<br>
+STYLE
+</h2>
+
+</div>
+
+<p class="section-text">
+細かな部分まで整えることで、
+全体の清潔感や印象は大きく変化します。
+
+“自然に整っている”
+という感覚を大切にする人たちへ向けた、
+新しいセルフケア発想。
+</p>
+
+</div>
+
+<div class="panel">
+
+<!-- image5.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image5.jpg.png"
+style="
+width:100%;
+border-radius:28px;
+margin-bottom:40px;
+display:block;
+"
+alt="">
+
+</a>
+
+<h3>
+Designed<br>
+For Daily<br>
+Confidence
+</h3>
+
+<p>
+自宅で、
+自分のタイミングで、
+必要な部分をスマートにケア。
+
+毎日の印象づくりを、
+もっとシンプルに、
+もっと快適に。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+SHOP NOW
+
+</a>
+
+<a class="cta light"
+href="page2.html">
+
+GO TO PAGE 2
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+PRECISION BEAUTY LAB
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
