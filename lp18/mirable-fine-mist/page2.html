@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ミストシャワーと美容バスタイム特集 | AQUA VEIL ROOM</title>
+
+<meta name="description" content="美容シャワー・ミストシャワー・バスタイム美容・透明感あるホームケアについて詳しく解説。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#f8feff 0%,
+#e4f7ff 100%
+);
+
+color:#18425c;
+
+line-height:2.1;
+
+overflow-x:hidden;
+}
+
+/* 背景 */
+
+.bg{
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at 15% 20%, rgba(255,255,255,0.95), transparent 24%),
+radial-gradient(circle at 80% 15%, rgba(180,230,255,0.55), transparent 28%),
+radial-gradient(circle at 50% 90%, rgba(120,210,255,0.3), transparent 35%);
+
+z-index:-20;
+}
+
+.water{
+position:fixed;
+
+width:140%;
+height:220px;
+
+left:-20%;
+
+border-radius:50%;
+
+border:
+1px solid rgba(110,205,255,0.18);
+
+z-index:-15;
+}
+
+.water.one{
+top:-100px;
+transform:rotate(-4deg);
+}
+
+.water.two{
+top:320px;
+transform:rotate(3deg);
+}
+
+.water.three{
+bottom:-120px;
+transform:rotate(-2deg);
+}
+
+/* header */
+
+.header{
+padding:
+28px 6vw;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:12px;
+font-weight:700;
+letter-spacing:4px;
+
+color:#2c82ad;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:3px;
+
+color:#73afd1;
+}
+
+/* hero */
+
+.hero{
+padding:
+40px 6vw
+90px;
+}
+
+.hero-box{
+padding:80px;
+
+background:
+rgba(255,255,255,0.62);
+
+border:
+1px solid rgba(120,210,255,0.24);
+
+border-radius:44px;
+
+backdrop-filter:blur(10px);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.hero-box::before{
+content:"";
+
+position:absolute;
+top:-120px;
+right:-120px;
+
+width:320px;
+height:320px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(100,220,255,0.32),
+transparent 70%);
+}
+
+.label{
+display:inline-block;
+
+padding:
+10px 18px;
+
+border-radius:999px;
+
+background:
+rgba(100,210,255,0.14);
+
+font-size:11px;
+letter-spacing:3px;
+font-weight:700;
+
+color:#4aa3d1;
+
+margin-bottom:30px;
+}
+
+.hero-title{
+font-size:6vw;
+line-height:0.9;
+
+font-weight:100;
+
+letter-spacing:-0.3vw;
+
+color:#225f82;
+
+margin-bottom:34px;
+}
+
+.hero-title strong{
+font-weight:700;
+
+color:#58d0ff;
+}
+
+.hero-text{
+max-width:920px;
+
+font-size:18px;
+line-height:2.25;
+
+color:#57788e;
+}
+
+/* article */
+
+.section{
+padding:
+0 6vw
+100px;
+}
+
+.article{
+padding:70px;
+
+border-radius:40px;
+
+background:
+rgba(255,255,255,0.66);
+
+border:
+1px solid rgba(120,210,255,0.22);
+
+backdrop-filter:blur(10px);
+}
+
+.article h2{
+font-size:46px;
+line-height:1;
+
+font-weight:200;
+
+letter-spacing:-0.15vw;
+
+color:#205f82;
+
+margin:
+80px 0 30px;
+}
+
+.article h2:first-child{
+margin-top:0;
+}
+
+.article p{
+font-size:17px;
+line-height:2.3;
+
+color:#5d7c90;
+
+margin-bottom:28px;
+}
+
+.article ul{
+margin:
+0 0 36px 26px;
+}
+
+.article li{
+margin-bottom:14px;
+
+color:#58788d;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+
+margin:
+44px 0 54px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+18px 36px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-size:12px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.cta.main{
+background:
+#5fd2ff;
+
+color:white;
+
+box-shadow:
+0 12px 26px rgba(95,210,255,0.26);
+}
+
+.cta.main:hover{
+transform:translateY(-4px);
+}
+
+.cta.sub{
+background:white;
+
+border:
+1px solid rgba(120,210,255,0.28);
+
+color:#4f86a7;
+}
+
+.keyword{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+
+margin:
+24px 0 38px;
+}
+
+.keyword span{
+padding:
+10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(120,210,255,0.12);
+
+font-size:11px;
+letter-spacing:2px;
+font-weight:700;
+
+color:#5196bd;
+}
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#76a3bd;
+}
+
+@media(max-width:920px){
+
+.hero-box,
+.article{
+padding:28px;
+}
+
+.hero-title{
+font-size:62px;
+letter-spacing:-3px;
+}
+
+.article h2{
+font-size:38px;
+}
+
+.hero,
+.section{
+padding-left:24px;
+padding-right:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="water one"></div>
+<div class="water two"></div>
+<div class="water three"></div>
+
+<header class="header">
+
+<div class="logo">
+AQUA VEIL ROOM
+</div>
+
+<div class="menu">
+WATER BEAUTY COLUMN
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="label">
+WATER BEAUTY LIFE
+</div>
+
+<h1 class="hero-title">
+THE NEW<br>
+<strong>BATH</strong><br>
+ROUTINE
+</h1>
+
+<p class="hero-text">
+近年、
+美容やホームケアの世界では、
+“水”
+そのものへの注目が高まっています。
+
+毎日のシャワー時間を、
+単なる習慣ではなく、
+リラックスや美容を意識した特別な時間として楽しむ。
+
+そんな新しいバスタイムスタイルが、
+今広がり始めています。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+<a class="cta sub"
+href="index.html">
+
+BACK TOP
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="article">
+
+<h2>
+なぜ今、
+美容シャワーが注目されているのか
+</h2>
+
+<p>
+以前まで、
+シャワーヘッドは
+“水を出すだけ”
+の存在として考えられていました。
+
+しかし最近では、
+美容意識の高まりとともに、
+バスタイムそのものを
+より快適に、
+より心地よく整えたい
+と考える人が増えています。
+</p>
+
+<p>
+特に近年では、
+美容家電やホームケアアイテムを、
+ライフスタイルの一部として楽しむ人も増えており、
+バスルーム空間へのこだわりも大きく変化しています。
+</p>
+
+<div class="keyword">
+
+<span>美容シャワー</span>
+<span>ミストシャワー</span>
+<span>ホームケア</span>
+<span>透明感</span>
+<span>バスタイム美容</span>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK DETAIL
+
+</a>
+
+</div>
+
+<h2>
+水を楽しむ時代へ
+</h2>
+
+<p>
+最近では、
+“浴びる”
+という行為そのものを、
+もっと心地よく楽しみたい
+という考え方が広がっています。
+</p>
+
+<p>
+細かなミスト感、
+やわらかな肌当たり、
+爽快感あるシャワー時間。
+
+そうした体験は、
+毎日のリフレッシュ時間を
+より特別なものへ変えてくれます。
+</p>
+
+<p>
+特に忙しい毎日の中では、
+短時間でも気分を切り替えられる時間が重要視されており、
+バスタイムの価値が見直されています。
+</p>
+
+<h2>
+バスルーム空間への意識変化
+</h2>
+
+<p>
+以前は、
+リビングや寝室に比べて、
+バスルームはあまりデザインを意識されない空間でした。
+
+しかし近年では、
+ホテルライクな空間づくりや、
+ミニマルで清潔感あるデザインが人気となっています。
+</p>
+
+<p>
+白、
+水色、
+シルバーなど、
+透明感あるカラーを取り入れた空間演出は、
+爽快感やリラックス感を生み出します。
+</p>
+
+<p>
+そのため、
+美容アイテムも、
+単なる機能性だけではなく、
+空間との調和を重視して選ぶ人が増えています。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta sub"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW OFFICIAL SITE
+
+</a>
+
+</div>
+
+<h2>
+ホームケア需要の拡大
+</h2>
+
+<p>
+美容サロンやスパだけではなく、
+自宅でのセルフケア需要は年々高まっています。
+
+背景には、
+好きなタイミングで使えること、
+移動時間が不要なこと、
+毎日の生活に取り入れやすいことなど、
+ホームケアならではのメリットがあります。
+</p>
+
+<p>
+特に最近では、
+美容意識の高い人ほど、
+毎日の積み重ねを重視する傾向があります。
+</p>
+
+<p>
+日々のルーティンの中に、
+少しだけ快適さや心地よさを加える。
+
+そんな考え方が、
+新しい美容習慣として広がっています。
+</p>
+
+<h2>
+美容アイテム選びで重視されること
+</h2>
+
+<p>
+最近の美容アイテム選びでは、
+単純な性能だけではなく、
+以下のようなポイントも重視されています。
+</p>
+
+<ul>
+
+<li>デザイン性</li>
+<li>空間との相性</li>
+<li>使いやすさ</li>
+<li>清潔感</li>
+<li>毎日続けやすいこと</li>
+<li>気分が上がること</li>
+
+</ul>
+
+<p>
+特に毎日使うアイテムだからこそ、
+“使いたくなるデザイン”
+は重要視されています。
+</p>
+
+<div class="keyword">
+
+<span>ホテルライク</span>
+<span>ホームスパ</span>
+<span>ミニマル空間</span>
+<span>爽快感</span>
+<span>ウォータービューティー</span>
+
+</div>
+
+<div class="cta-wrap">
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+SHOP NOW
+
+</a>
+
+<a class="cta sub"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+</div>
+
+<h2>
+これからのバスタイム美容
+</h2>
+
+<p>
+これからの美容は、
+特別な日だけではなく、
+毎日の暮らしの中に自然に取り入れる方向へ進化しています。
+</p>
+
+<p>
+シャワー時間を、
+もっと快適に、
+もっと爽やかに。
+
+水を楽しむ感覚そのものが、
+新しいホームビューティー体験として
+広がっていくかもしれません。
+</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+AQUA VEIL ROOM
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
