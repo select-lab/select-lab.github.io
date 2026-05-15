@@ -40,6 +40,8 @@ overflow-x:hidden;
 line-height:2.6;
 }
 
+/* 背景 */
+
 .bg-noise{
 
 position:fixed;
@@ -71,6 +73,8 @@ pointer-events:none;
 z-index:-29;
 }
 
+/* サイドライン */
+
 .side-line{
 
 position:fixed;
@@ -97,6 +101,8 @@ z-index:20;
 left:auto;
 right:38px;
 }
+
+/* header */
 
 .header{
 
@@ -181,6 +187,8 @@ letter-spacing:4px;
 color:#766d5d;
 }
 
+/* hero */
+
 .hero{
 
 min-height:100vh;
@@ -222,9 +230,9 @@ color:rgba(90,70,40,0.03);
 display:grid;
 
 grid-template-columns:
-1fr 520px;
+1fr 720px;
 
-gap:70px;
+gap:90px;
 
 align-items:center;
 
@@ -278,7 +286,7 @@ color:#9a8152;
 
 .hero h1{
 
-font-size:6.2vw;
+font-size:6vw;
 
 line-height:1.12;
 
@@ -402,11 +410,13 @@ box-shadow:
 0 14px 30px rgba(70,55,30,0.06);
 }
 
+/* 画像エリア */
+
 .hero-card{
 
 position:relative;
 
-height:680px;
+height:760px;
 }
 
 .floating-card{
@@ -418,7 +428,7 @@ border-radius:34px;
 overflow:hidden;
 
 background:
-rgba(255,255,255,0.6);
+rgba(255,255,255,0.72);
 
 backdrop-filter:blur(18px);
 
@@ -427,6 +437,8 @@ border:
 
 box-shadow:
 0 35px 80px rgba(70,55,30,0.16);
+
+padding:18px;
 }
 
 .floating-card img{
@@ -434,9 +446,13 @@ box-shadow:
 width:100%;
 height:100%;
 
-object-fit:cover;
+object-fit:contain;
 
 display:block;
+
+background:#f6f1e7;
+
+border-radius:24px;
 }
 
 .card-main{
@@ -448,19 +464,19 @@ right:0;
 top:0;
 
 transform:
-rotate(2deg);
+rotate(1deg);
 }
 
 .card-small{
 
-width:220px;
-height:280px;
+width:320px;
+height:320px;
 
-left:-50px;
+left:-70px;
 bottom:-40px;
 
 transform:
-rotate(-8deg);
+rotate(-5deg);
 
 z-index:3;
 }
@@ -494,6 +510,8 @@ letter-spacing:3px;
 
 color:#5b5448;
 }
+
+/* section */
 
 .section{
 
@@ -648,6 +666,10 @@ border-radius:30px;
 
 display:block;
 
+object-fit:contain;
+
+background:#f6f1e7;
+
 box-shadow:
 0 28px 70px rgba(70,55,30,0.14);
 }
@@ -725,6 +747,8 @@ line-height:2.5;
 margin-bottom:0;
 }
 
+/* CTA */
+
 .cta{
 
 padding:
@@ -783,6 +807,8 @@ margin:
 40px;
 }
 
+/* footer */
+
 .footer{
 
 padding:60px 20px;
@@ -796,18 +822,25 @@ letter-spacing:6px;
 color:#7c705b;
 }
 
-@media(max-width:1100px){
+/* responsive */
 
-.hero-layout,
-.section-layout{
+@media(max-width:1200px){
+
+.hero-layout{
 
 grid-template-columns:1fr;
 }
 
 .hero-card{
 
-height:540px;
-margin-top:50px;
+height:620px;
+
+margin-top:60px;
+}
+
+.section-layout{
+
+grid-template-columns:1fr;
 }
 
 .sticky-side{
@@ -827,7 +860,12 @@ padding-top:140px;
 
 .hero h1{
 
-font-size:58px;
+font-size:56px;
+}
+
+.hero-card{
+
+height:460px;
 }
 
 .content-card,
@@ -840,11 +878,6 @@ padding:34px;
 .grid{
 
 grid-template-columns:1fr;
-}
-
-.hero-card{
-
-height:420px;
 }
 
 .card-small{
@@ -949,7 +982,7 @@ href="page2.html">
 <div class="floating-card card-main">
 
 <img src="image1.jpg.png"
-alt="和紅茶">
+alt="雅紅茶">
 
 </div>
 
@@ -1056,31 +1089,10 @@ alt="和モダンティータイム">
 日本国内で丁寧に作られた和紅茶が支持されています。
 </p>
 
-<p>
-特に和紅茶は、
-海外紅茶と比較すると、
-渋みが少なく、
-やさしい甘みが特徴です。
-
-そのため、
-普段あまり紅茶を飲まない方でも飲みやすく、
-毎日のティータイムへ取り入れやすいと言われています。
-</p>
-
-<p>
-また、
-和紅茶は和菓子との相性も非常に良く、
-羊羹、
-最中、
-どら焼き、
-大福など、
-日本らしい甘味と自然に調和します。
-</p>
-
 <div class="image-box">
 
 <img src="image4.jpg.png"
-alt="和紅茶と和菓子">
+alt="和紅茶ギフト">
 
 </div>
 
@@ -1101,113 +1113,29 @@ alt="和紅茶と和菓子">
 <div class="content-card">
 
 <h3>
-ミルクティー好きからも人気の理由
-</h3>
-
-<p>
-和紅茶は、
-ミルクティーとの相性が非常に良いことでも知られています。
-
-一般的な海外紅茶は、
-香りや渋みが強いものも多く、
-好みが分かれることがあります。
-
-しかし和紅茶は、
-やさしく穏やかな香りを持っているため、
-ミルクを加えても味が崩れにくく、
-自然なコクを楽しめます。
-</p>
-
-<div class="grid">
-
-<div class="mini-card">
-
-<h4>
-朝のミルクティー
-</h4>
-
-<p>
-忙しい朝でも、
-やさしい香りが心を落ち着かせ、
-穏やかな時間を作ってくれます。
-</p>
-
-</div>
-
-<div class="mini-card">
-
-<h4>
-夜のリラックスタイム
-</h4>
-
-<p>
-読書や映画時間とも相性抜群。
-夜の静かな時間へ自然に寄り添います。
-</p>
-
-</div>
-
-</div>
-
-<p>
-最近では、
-“おうちカフェ”
-を楽しむ人たちからも、
-和紅茶が支持されています。
-
-お気に入りのマグカップを使い、
-ゆっくりミルクティーを淹れる時間。
-
-そんな静かな時間が、
-毎日の癒しとして人気を集めています。
-</p>
-
-</div>
-
-<div class="content-card">
-
-<h3>
 ギフトとしても選ばれる和紅茶
 </h3>
 
 <div class="image-box">
 
 <img src="image5.jpg.png"
-alt="和紅茶ギフト">
+alt="高級和紅茶">
 
 </div>
 
 <p>
 和紅茶は、
-ギフト需要も非常に高いジャンルです。
-
 母の日、
 敬老の日、
-お中元、
 誕生日、
-内祝いなど、
-幅広いシーンで選ばれています。
-</p>
+お中元など、
+幅広いギフトシーンで人気があります。
 
-<p>
 深緑、
 生成り、
 金を基調とした、
-和モダンな世界観。
-
-まるで京都旅館のような、
-静かで落ち着いた空気感を感じられるデザインも、
-人気の理由のひとつです。
+和モダンな世界観も人気の理由のひとつです。
 </p>
-
-<div class="quote">
-
-“上質だけど派手すぎない。”
-
-和紅茶には、
-日本らしい静かな高級感があります。
-
-</div>
 
 </div>
 
