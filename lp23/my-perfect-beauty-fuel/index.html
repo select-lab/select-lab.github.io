@@ -48,8 +48,6 @@ overflow-x:hidden;
 line-height:2.3;
 }
 
-/* background */
-
 .bg{
 
 position:fixed;
@@ -80,8 +78,6 @@ pointer-events:none;
 
 z-index:-19;
 }
-
-/* header */
 
 .header{
 
@@ -165,8 +161,6 @@ letter-spacing:4px;
 
 color:#b18d8d;
 }
-
-/* hero */
 
 .hero{
 
@@ -275,13 +269,11 @@ max-width:760px;
 margin-bottom:42px;
 }
 
-/* hero image */
-
 .hero-visual{
 
 position:relative;
 
-height:760px;
+height:620px;
 }
 
 .glass-card{
@@ -311,7 +303,9 @@ padding:18px;
 width:100%;
 height:100%;
 
-object-fit:cover;
+object-fit:contain;
+
+background:#fffaf7;
 
 border-radius:28px;
 
@@ -326,13 +320,13 @@ height:100%;
 
 .card-sub{
 
-width:320px;
-height:320px;
+width:420px;
+height:240px;
 
-left:-70px;
-bottom:-40px;
+left:-40px;
+bottom:-20px;
 
-transform:rotate(-7deg);
+transform:rotate(-5deg);
 
 z-index:3;
 }
@@ -366,8 +360,6 @@ letter-spacing:3px;
 
 color:#b57f7f;
 }
-
-/* buttons */
 
 .button-wrap{
 
@@ -424,8 +416,6 @@ border:
 
 color:#a26c6c;
 }
-
-/* section */
 
 .section{
 
@@ -522,6 +512,10 @@ border-radius:32px;
 
 display:block;
 
+object-fit:contain;
+
+background:#fffaf7;
+
 box-shadow:
 0 28px 70px rgba(255,180,180,0.16);
 }
@@ -552,130 +546,6 @@ margin:
 42px 0;
 }
 
-.grid-2{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:24px;
-
-margin-top:32px;
-}
-
-.mini{
-
-padding:34px;
-
-border-radius:28px;
-
-background:
-rgba(255,255,255,0.58);
-
-backdrop-filter:blur(14px);
-
-border:
-1px solid rgba(255,255,255,0.8);
-
-box-shadow:
-0 18px 40px rgba(255,180,180,0.08);
-}
-
-.mini h4{
-
-font-size:22px;
-
-margin-bottom:16px;
-
-color:#735959;
-}
-
-.mini p{
-
-font-size:15px;
-
-line-height:2.4;
-
-margin-bottom:0;
-}
-
-/* cta */
-
-.cta{
-
-padding:
-120px 7vw
-150px;
-}
-
-.cta-box{
-
-padding:90px;
-
-border-radius:48px;
-
-background:
-linear-gradient(
-135deg,
-#ffc0cb,
-#f7d3aa
-);
-
-box-shadow:
-0 40px 100px rgba(255,180,180,0.22);
-
-text-align:center;
-
-position:relative;
-
-overflow:hidden;
-}
-
-.cta-box::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-120deg,
-rgba(255,255,255,0.18),
-transparent 50%
-);
-}
-
-.cta h2{
-
-font-size:54px;
-
-line-height:1.3;
-
-margin-bottom:30px;
-
-color:white;
-}
-
-.cta p{
-
-font-size:17px;
-
-line-height:2.8;
-
-color:white;
-
-max-width:900px;
-
-margin:
-0 auto
-40px;
-}
-
-/* footer */
-
 .footer{
 
 padding:70px 20px;
@@ -689,8 +559,6 @@ letter-spacing:6px;
 color:#b18d8d;
 }
 
-/* responsive */
-
 @media(max-width:1200px){
 
 .hero-layout{
@@ -700,7 +568,7 @@ grid-template-columns:1fr;
 
 .hero-visual{
 
-height:620px;
+height:520px;
 
 margin-top:60px;
 }
@@ -719,20 +587,18 @@ padding-top:150px;
 font-size:58px;
 }
 
-.content-card,
-.cta-box{
+.content-card{
 
 padding:36px;
 }
 
-.grid-2{
-
-grid-template-columns:1fr;
-}
-
 .card-sub{
 
-display:none;
+width:280px;
+height:170px;
+
+left:0;
+bottom:-10px;
 }
 
 }
@@ -785,16 +651,6 @@ BEAUTY PROTEIN
 
 そんな女性たちから、
 今“美容プロテイン”への注目が高まっています。
-
-中でも人気なのが、
-国産素材へこだわった
-「私の完全美容食」。
-
-北海道産大豆、
-沖縄黒糖、
-国産雑穀など、
-自然素材を中心に作られた、
-女性のためのソイプロテインです。
 </p>
 
 <div class="button-wrap">
@@ -855,36 +711,12 @@ alt="美容習慣">
 最近では、
 美容や健康を意識する女性を中心に、
 プロテイン人気が急上昇しています。
-
-以前までプロテインといえば、
-筋トレやボディメイクをする男性向け、
-というイメージを持つ方も少なくありませんでした。
-
-しかし現在では、
-“美容習慣”
-“朝食代わり”
-“置き換え”
-“インナーケア”
-といった目的で、
-女性向けプロテインを取り入れる方が増えています。
-</p>
-
-<p>
-特に30代・40代・50代になると、
-食生活の乱れや栄養不足、
-美容への悩みを感じる女性も増えてきます。
-
-そのため、
-不足しがちな栄養を手軽に補える美容プロテインへの注目が高まっています。
 </p>
 
 <div class="quote">
 
 「無理なダイエット」ではなく、
 “きちんと食べて整える”。
-
-そんな価値観が、
-今の女性向け美容習慣では重視されています。
 
 </div>
 
@@ -895,33 +727,10 @@ alt="女性向け美容プロテイン">
 
 </div>
 
-<h3>
-国産素材へのこだわりが支持される理由
-</h3>
-
 <p>
-「私の完全美容食」が人気を集める理由の一つが、
-国産素材へのこだわりです。
-
-主原料となる大豆は、
-北海道産の非遺伝子組み換え・非ゲノム編集大豆を使用。
-
-さらに、
-沖縄の黒糖、
-室戸の塩、
-国産雑穀など、
-素材そのものへ強くこだわっています。
-</p>
-
-<p>
-最近では、
-“何を食べるか”
-だけでなく、
-“どんな素材なのか”
-を重視する女性も増えています。
-
-そうしたナチュラル志向・無添加志向とも、
-非常に相性が良いプロテインです。
+不足しがちな栄養を、
+手軽に補える美容習慣として、
+多くの女性から支持されています。
 </p>
 
 </div>
@@ -932,62 +741,6 @@ alt="女性向け美容プロテイン">
 美容プロテインはまずい？飲みにくい？
 </h2>
 
-<p>
-プロテインに対して、
-
-「味が苦手」
-「人工的な甘さが気になる」
-「飲みにくい」
-
-そんなイメージを持っている方も少なくありません。
-
-しかし、
-最近の女性向け美容プロテインは、
-“おいしさ”
-を重視した商品が非常に増えています。
-</p>
-
-<div class="grid-2">
-
-<div class="mini">
-
-<h4>
-黒糖の自然な甘さ
-</h4>
-
-<p>
-人工的な甘さではなく、
-自然でやさしい味わい。
-きな粉風味に近い感覚で楽しめます。
-</p>
-
-</div>
-
-<div class="mini">
-
-<h4>
-豆乳との相性も抜群
-</h4>
-
-<p>
-牛乳だけでなく、
-豆乳割りも人気。
-朝食代わりにも取り入れやすいです。
-</p>
-
-</div>
-
-</div>
-
-<div class="quote">
-
-「プロテインは我慢して飲むもの」
-
-そんなイメージが変わった、
-という口コミも増えています。
-
-</div>
-
 <div class="image-box">
 
 <img src="image4.jpg.png"
@@ -995,22 +748,12 @@ alt="黒糖プロテイン">
 
 </div>
 
-<h3>
-毎日の“美容習慣”へ取り入れやすい
-</h3>
-
 <p>
-美容や健康は、
-短期間ではなく、
-毎日の積み重ねが大切です。
+最近の美容プロテインは、
+自然な甘さと飲みやすさが特徴。
 
-そのため、
-“続けやすさ”
-は非常に重要なポイントになります。
-
-私の完全美容食は、
-自然な味わいと飲みやすさから、
-毎日続けやすい美容プロテインとして支持されています。
+黒糖やきな粉風味など、
+毎日続けやすい味わいの商品が増えています。
 </p>
 
 </div>
@@ -1018,27 +761,8 @@ alt="黒糖プロテイン">
 <div class="content-card">
 
 <h2>
-40代・50代女性にも人気の理由
+40代・50代女性にも人気
 </h2>
-
-<p>
-最近では、
-40代・50代女性からの人気も高まっています。
-
-年齢とともに、
-食生活や美容、
-健康への意識が変わる中で、
-
-“無理をしない美容習慣”
-
-を求める方が増えているためです。
-</p>
-
-<p>
-特に、
-忙しい朝の栄養補給や、
-置き換え習慣として取り入れる方も増えています。
-</p>
 
 <div class="image-box">
 
@@ -1047,60 +771,11 @@ alt="女性美容習慣">
 
 </div>
 
-<div class="quote">
-
-毎日を頑張る女性へ、
-“内側から整える”
-という新しい美容習慣。
-
-</div>
-
 <p>
-また、
-人工甘味料などを極力使用しない自然派設計も、
-大人女性から支持される理由のひとつです。
+“無理をしない美容習慣”
+として、
+大人女性からの支持も高まっています。
 </p>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<div class="cta-box">
-
-<h2>
-毎日の美容習慣を、<br>
-もっと心地よく。
-</h2>
-
-<p>
-国産素材へこだわった、
-女性のための美容プロテイン。
-
-無理なく、
-自然に、
-毎日の暮らしへ取り入れてみませんか？
-</p>
-
-<div class="button-wrap"
-style="justify-content:center;">
-
-<a class="btn main"
-href="#">
-
-公式ショップを見る
-
-</a>
-
-<a class="btn sub"
-href="#">
-
-人気レビューを見る
-
-</a>
-
-</div>
 
 </div>
 
