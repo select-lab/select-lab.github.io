@@ -1,1 +1,886 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Takashirt｜猫好き・犬好きのためのオリジナルグッズ＆うちの子Tシャツ</title>
+
+<meta name="description" content="猫好き・犬好きのためのオリジナルTシャツ＆うちの子グッズ。写真入り・名入れ・プレゼントにも人気。SNS映えする可愛いペットグッズをTakashirtで。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+background:
+linear-gradient(180deg,#fffdf9 0%,#fff7f0 35%,#fffaf5 100%);
+color:#4b3d34;
+overflow-x:hidden;
+line-height:2;
+position:relative;
+}
+
+body::before{
+content:"🐾";
+position:fixed;
+top:8%;
+left:3%;
+font-size:120px;
+opacity:0.05;
+transform:rotate(-15deg);
+z-index:-1;
+}
+
+body::after{
+content:"🐈";
+position:fixed;
+bottom:5%;
+right:4%;
+font-size:130px;
+opacity:0.04;
+z-index:-1;
+}
+
+.container{
+width:92%;
+max-width:1280px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+padding:110px 0 90px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#ffd8b8 0%,transparent 70%);
+top:-300px;
+right:-200px;
+opacity:0.5;
+filter:blur(90px);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:60px;
+align-items:center;
+}
+
+.hero-card{
+position:relative;
+background:rgba(255,255,255,0.72);
+border:2px dashed #ffd3ba;
+padding:60px;
+border-radius:42px;
+box-shadow:0 20px 60px rgba(255,185,135,0.16);
+overflow:hidden;
+}
+
+.hero-card::before{
+content:"📸";
+position:absolute;
+top:25px;
+right:30px;
+font-size:44px;
+opacity:0.18;
+}
+
+.hero-card::after{
+content:"🐾";
+position:absolute;
+bottom:20px;
+left:25px;
+font-size:52px;
+opacity:0.12;
+}
+
+.label{
+display:inline-block;
+padding:10px 20px;
+border-radius:999px;
+background:#fff0e4;
+color:#ff8a50;
+font-weight:bold;
+font-size:13px;
+letter-spacing:1px;
+margin-bottom:28px;
+}
+
+h1{
+font-size:68px;
+line-height:1.08;
+margin-bottom:30px;
+font-weight:800;
+letter-spacing:-2px;
+}
+
+.grad{
+background:linear-gradient(90deg,#ff9f67,#ff6f61);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text{
+font-size:18px;
+color:#7b6659;
+margin-bottom:35px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+}
+
+.cta-btn{
+display:inline-block;
+padding:18px 34px;
+border-radius:999px;
+background:linear-gradient(135deg,#fff6ef,#ffd9bf);
+border:2px solid #fff;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(255,180,120,0.15);
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-5px) rotate(-1deg);
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image::before{
+content:"";
+position:absolute;
+inset:-18px;
+border:3px dashed #ffd4b6;
+border-radius:38px;
+transform:rotate(-2deg);
+}
+
+.hero-image img{
+width:100%;
+border-radius:36px;
+object-fit:contain;
+position:relative;
+z-index:2;
+background:#fff;
+padding:10px;
+box-shadow:0 20px 60px rgba(255,185,135,0.16);
+}
+
+section{
+padding:120px 0;
+position:relative;
+}
+
+.section-title{
+font-size:52px;
+line-height:1.2;
+margin-bottom:28px;
+font-weight:800;
+position:relative;
+}
+
+.section-title::after{
+content:"";
+position:absolute;
+width:120px;
+height:6px;
+background:linear-gradient(90deg,#ffb685,#ffd7bc);
+left:0;
+bottom:-16px;
+border-radius:999px;
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.text{
+font-size:17px;
+color:#745f52;
+}
+
+.photo-card{
+position:relative;
+padding:34px;
+background:#fffaf5;
+border-radius:36px;
+border:2px dashed #ffd9c0;
+box-shadow:0 20px 60px rgba(255,185,135,0.12);
+}
+
+.photo-card::before{
+content:"♡";
+position:absolute;
+top:20px;
+right:25px;
+font-size:42px;
+opacity:0.12;
+}
+
+.photo-card img{
+width:100%;
+border-radius:28px;
+object-fit:contain;
+background:#fff;
+padding:8px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.feature{
+padding:36px;
+border-radius:34px;
+background:#fffaf4;
+border:2px dashed #ffd7be;
+position:relative;
+overflow:hidden;
+box-shadow:0 18px 50px rgba(255,185,135,0.1);
+}
+
+.feature::before{
+content:"🐾";
+position:absolute;
+right:18px;
+bottom:12px;
+font-size:54px;
+opacity:0.08;
+}
+
+.feature h3{
+font-size:24px;
+margin-bottom:16px;
+}
+
+.feature p{
+font-size:15px;
+color:#745f52;
+}
+
+.long-text p{
+margin-bottom:24px;
+font-size:17px;
+color:#745f52;
+}
+
+.cta-section{
+text-align:center;
+}
+
+.cta-box{
+position:relative;
+padding:90px 40px;
+border-radius:50px;
+background:#fff8f2;
+border:2px dashed #ffd7be;
+box-shadow:0 20px 60px rgba(255,185,135,0.12);
+overflow:hidden;
+}
+
+.cta-box::before{
+content:"🐶";
+position:absolute;
+top:30px;
+left:35px;
+font-size:70px;
+opacity:0.08;
+}
+
+.cta-box::after{
+content:"🐱";
+position:absolute;
+bottom:20px;
+right:35px;
+font-size:80px;
+opacity:0.08;
+}
+
+.cta-box h2{
+font-size:58px;
+line-height:1.2;
+margin-bottom:26px;
+font-weight:800;
+}
+
+.faq{
+display:grid;
+gap:22px;
+margin-top:50px;
+}
+
+.faq-item{
+padding:34px;
+border-radius:28px;
+background:#fffaf4;
+border:2px dashed #ffd7be;
+}
+
+.faq-item h3{
+font-size:24px;
+margin-bottom:14px;
+}
+
+footer{
+padding:70px 0;
+text-align:center;
+font-size:14px;
+color:#8c7364;
+}
+
+@media(max-width:980px){
+
+.hero-grid,
+.grid-2{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:50px;
+}
+
+.section-title{
+font-size:40px;
+}
+
+.cta-box h2{
+font-size:42px;
+}
+
+.hero-card{
+padding:38px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="hero-card">
+
+<div class="label">
+FOR CAT & DOG LOVERS
+</div>
+
+<h1>
+うちの子を、<br>
+<span class="grad">世界で一番かわいい</span><br>
+グッズに。
+</h1>
+
+<p class="hero-text">
+猫好き・犬好きのためのオリジナルグッズブランド「Takashirt」。  
+うちの子写真Tシャツ、名入れグッズ、プレゼント向けアイテムなど、SNS映えする可愛いペットグッズを楽しめます。
+</p>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク" class="cta-btn">
+人気グッズを見る
+</a>
+
+<a href="page2.html" class="cta-btn">
+猫好きプレゼント特集を見る
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<a href="アフィリエイトリンク">
+<img src="image1.jpg.png" alt="猫Tシャツ">
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div class="photo-card">
+
+<a href="アフィリエイトリンク">
+<img src="image2.jpg.png" alt="うちの子グッズ">
+</a>
+
+</div>
+
+<div>
+
+<h2 class="section-title">
+“うちの子”が<br>
+もっと特別になる
+</h2>
+
+<div class="long-text">
+
+<p>
+ペットは、ただの動物ではありません。  
+毎日を一緒に過ごす、大切な家族です。
+</p>
+
+<p>
+だからこそ、「うちの子をグッズにしたい」「写真を残したい」「もっと可愛く楽しみたい」と考える飼い主さんが増えています。
+</p>
+
+<p>
+Takashirtでは、猫・犬好きのためのオリジナルデザインを多数展開。  
+写真入りTシャツ、うちの子トートバッグ、オリジナルマグカップなど、“世界にひとつだけ”のグッズを楽しめます。
+</p>
+
+<p>
+SNS映えするデザインも多く、InstagramやTikTokでも人気を集めています。
+</p>
+
+</div>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+うちの子グッズを見る
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+猫好き・犬好きに<br>
+人気の理由
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>📸 写真入りデザイン</h3>
+<p>
+うちの子写真を使ったオリジナルTシャツや雑貨を作れる人気サービス。
+</p>
+</div>
+
+<div class="feature">
+<h3>🐾 SNS映え</h3>
+<p>
+韓国雑貨風・ナチュラル系・ゆるかわデザインでInstagramでも人気。
+</p>
+</div>
+
+<div class="feature">
+<h3>🎁 プレゼント人気</h3>
+<p>
+猫好き・犬好きへの誕生日プレゼントや母の日ギフトにも選ばれています。
+</p>
+</div>
+
+<div class="feature">
+<h3>🧡 名入れ対応</h3>
+<p>
+ペットの名前を入れられるオリジナルデザインが人気。
+</p>
+</div>
+
+<div class="feature">
+<h3>🐱 猫グッズが豊富</h3>
+<p>
+猫Tシャツ・トート・スマホケース・雑貨などラインナップ多数。
+</p>
+</div>
+
+<div class="feature">
+<h3>🐶 犬好きにも人気</h3>
+<p>
+犬種別デザインやうちの子グッズも多数展開されています。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div>
+
+<h2 class="section-title">
+SNS時代の<br>
+“うちの子ライフ”
+</h2>
+
+<div class="long-text">
+
+<p>
+近年、InstagramやTikTokでは「うちの子アカウント」を運営する方が急増しています。
+</p>
+
+<p>
+お気に入りの写真を投稿したり、ペットとの暮らしを共有したり、猫好き・犬好き同士で繋がる文化が広がっています。
+</p>
+
+<p>
+その中で人気を集めているのが、“うちの子グッズ”です。
+</p>
+
+<p>
+Tシャツやスマホケース、トートバッグなどにペット写真を入れて楽しむスタイルは、今やSNS世代の定番になっています。
+</p>
+
+<p>
+Takashirtでは、そんなSNS映えを意識したデザインが豊富。  
+シンプルで可愛い韓国雑貨風デザインや、ナチュラル系の優しいデザインが人気を集めています。
+</p>
+
+<p>
+「うちの子をもっと可愛く残したい」  
+「世界で一つだけのグッズを作りたい」  
+そんな飼い主さんから支持されているブランドです。
+</p>
+
+</div>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+人気デザインを見る
+</a>
+
+<a href="page2.html" class="cta-btn">
+プレゼント特集を見る
+</a>
+
+</div>
+
+</div>
+
+<div class="photo-card">
+
+<a href="アフィリエイトリンク">
+<img src="image3.jpg.png" alt="SNS映え猫グッズ">
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div class="photo-card">
+
+<a href="アフィリエイトリンク">
+<img src="image4.jpg.png" alt="猫好きプレゼント">
+</a>
+
+</div>
+
+<div>
+
+<h2 class="section-title">
+猫好き・犬好きへの<br>
+プレゼントにも人気
+</h2>
+
+<div class="long-text">
+
+<p>
+猫好き・犬好きへのプレゼント選びは、意外と難しいもの。
+</p>
+
+<p>
+しかし最近では、「うちの子グッズ」をプレゼントする方が増えています。
+</p>
+
+<p>
+ペット写真入りグッズや名入れTシャツは、“自分のためだけの特別感”があり、非常に喜ばれやすいギフトです。
+</p>
+
+<p>
+特に人気なのは、
+</p>
+
+<ul>
+
+<li>猫好き 誕生日プレゼント</li>
+<li>犬好き ギフト</li>
+<li>父の日 猫グッズ</li>
+<li>母の日 犬グッズ</li>
+<li>うちの子記念日</li>
+
+</ul>
+
+<p>
+などのイベント系需要です。
+</p>
+
+<p>
+Takashirtでは、可愛らしいだけではなく、普段使いしやすいナチュラルデザインも多いため、大人世代にも人気があります。
+</p>
+
+<p>
+シンプルでおしゃれなデザインは、雑貨好き・韓国インテリア好きの方にも好評です。
+</p>
+
+</div>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+ギフト人気商品を見る
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div>
+
+<h2 class="section-title">
+写真を残すだけじゃない。<br>
+毎日をもっと楽しく。
+</h2>
+
+<div class="long-text">
+
+<p>
+スマホの中には、たくさんのペット写真が保存されている方も多いはずです。
+</p>
+
+<p>
+でも、その写真を「グッズ」として残すことで、毎日の楽しさはもっと広がります。
+</p>
+
+<p>
+お気に入りの猫写真をTシャツにしたり、愛犬の写真をトートバッグにしたり。  
+それだけで、毎日の暮らしが少し幸せになります。
+</p>
+
+<p>
+Takashirtは、そんな“ペットとの暮らしをもっと楽しくする”ためのブランドです。
+</p>
+
+<p>
+可愛いだけではなく、「自分だけの特別感」を大切にしたい方に選ばれています。
+</p>
+
+<p>
+最近では、ペットロス対策として「思い出を形に残したい」という需要も増えており、うちの子グッズ市場は年々拡大しています。
+</p>
+
+</div>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+オリジナルグッズを見る
+</a>
+
+</div>
+
+</div>
+
+<div class="photo-card">
+
+<a href="アフィリエイトリンク">
+<img src="image5.jpg.png" alt="うちの子写真グッズ">
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+猫好き・犬好きのための<br>
+<span class="grad">特別な毎日を。</span>
+</h2>
+
+<p style="font-size:18px;color:#7b6659;max-width:760px;margin:auto auto 40px;">
+SNS映えする可愛いデザインから、世界に一つだけのうちの子グッズまで。  
+Takashirtで、ペットとの暮らしをもっと楽しく。
+</p>
+
+<div class="cta-wrap" style="justify-content:center;">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク" class="cta-btn">
+人気商品を見る
+</a>
+
+<a href="page2.html" class="cta-btn">
+猫好きプレゼント記事へ
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+よくある質問
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>
+写真入りグッズは作れますか？
+</h3>
+
+<p>
+ペット写真を使ったオリジナルTシャツや雑貨を作成できます。
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+プレゼントにも向いていますか？
+</h3>
+
+<p>
+猫好き・犬好き向けギフトとして非常に人気があります。
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+どんな商品がありますか？
+</h3>
+
+<p>
+Tシャツ・トートバッグ・スマホケース・マグカップなど様々なグッズがあります。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+© Takashirt Pet Lovers Collection
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
